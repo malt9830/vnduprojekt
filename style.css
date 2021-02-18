@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.container article {
+    cursor: pointer;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#section_other .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
