@@ -13,7 +13,193 @@ img {
 section {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
 }
+
+body {
+    background-color: #F0E6DD;
+    margin: 0;
+}
+
+/*------------------header------------------*/
+
+header {
+    background-color: #D9D0C8;
+    padding: 0.5rem;
+}
+
+ul {
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 4rem;
+}
+
+li a {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*------------------landing------------------*/
+
+#landing {
+    width: 100%;
+    height: 100vh;
+}
+
+#landing_content {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#landing_text {
+    text-align: center;
+}
+
+#landing_text_bottom {
+    line-height: 1rem;
+}
+
+.landing_letter {
+    display: inline-block;
+    font-family: 'Limelight', sans-serif;
+    font-size: 10rem;
+}
+
+#landing_v {
+    color: #F3ACA9;
+}
+
+#landing_n {
+    color: #E72118;
+}
+
+#landing_d {
+    color: #8BAAEC;
+}
+
+#landing_u {
+    color: #E5B806;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #DB0916;
+}
+
+@media (min-width:650px) {
+
+    #landing_text_top,
+    #landing_text_bottom {
+        display: inline-block;
+        line-height: normal;
+    }
+
+    #landing_text {
+        place-self: center center;
+    }
+}
+
+@media (min-width:1000px) {
+
+    #landing_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*------------------welcome------------------*/
+
+#section_welcome {
+    margin-bottom: 7rem;
+}
+
+/*------------------examples------------------*/
+
+#section_examples .container {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#section_examples article {
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 17rem;
+    margin: 0.5rem;
+}
+
+#section_examples h1 {
+    font-family: 'Limelight', sans-serif;
+}
+
+#section_examples h2 {
+    font-family: 'Assistant', sans-serif;
+    color: #E5B829;
+    margin: 0;
+}
+
+#section_examples h3 {
+    font-family: 'Assistant', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: #707070;
+    margin: 0.5rem 0;
+}
+
+#section_examples p {
+    font-family: 'Assistant', sans-serif;
+    margin-top: 0.5rem;
+    color: #707070;
+    white-space: normal;
+}
+
+#section_examples img {
+    margin: 0;
+    object-fit: cover;
+    height: 25rem;
+}
+
+#section_examples button {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #FCBF2F;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid #FCBF2F;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#section_examples .top {
+    margin-bottom: 0;
+}
+
+#section_examples .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.3rem;
+    margin-top: 0;
+    height: 17rem;
+}
+
+/*------------------x------------------*/
 
 #section_other .container {
     display: grid;
