@@ -45,6 +45,62 @@ li a {
     color: black;
 }
 
+/*------------------footer------------------*/
+
+footer {
+    background-color: #E5B829;
+    color: white;
+    padding: 1.5rem;
+    margin-top: 4rem;
+}
+
+footer h4 {
+    font-family: 'Assistant';
+    font-weight: 700;
+    margin-top: 0;
+}
+
+footer p {
+    font-family: 'Assistant';
+    margin: 0;
+}
+
+footer .left {
+    margin-bottom: 2.5rem;
+}
+
+footer .right {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.footer_bottom {
+    text-align: center;
+}
+
+footer .fab {
+    margin: 1rem;
+    align-self: center;
+}
+
+@media (min-width:650px) {
+    .footer_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+
+    footer .left,
+    footer .right {
+        margin-bottom: 0;
+    }
+
+    footer .right {
+        display: flex;
+    }
+}
 
 /*------------------landing------------------*/
 
@@ -129,29 +185,30 @@ li a {
 
 /*------------------examples------------------*/
 
-#section_examples .container {
+.container {
     overflow: auto;
     white-space: nowrap;
 }
 
-#section_examples article {
+article {
     display: inline-flex;
     flex-direction: column;
     max-width: 17rem;
     margin: 0.5rem;
 }
 
-#section_examples h1 {
+#section_examples h1,
+#section_other h1 {
     font-family: 'Limelight', sans-serif;
 }
 
-#section_examples h2 {
+article h2 {
     font-family: 'Assistant', sans-serif;
     color: #E5B829;
     margin: 0;
 }
 
-#section_examples h3 {
+article h3 {
     font-family: 'Assistant', sans-serif;
     font-style: italic;
     font-weight: 300;
@@ -159,20 +216,20 @@ li a {
     margin: 0.5rem 0;
 }
 
-#section_examples p {
+article p {
     font-family: 'Assistant', sans-serif;
     margin-top: 0.5rem;
     color: #707070;
     white-space: normal;
 }
 
-#section_examples img {
+article img {
     margin: 0;
     object-fit: cover;
     height: 25rem;
 }
 
-#section_examples button {
+article button {
     font-family: 'Assistant', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -183,13 +240,14 @@ li a {
     border: 2px solid #FCBF2F;
     width: 100%;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
-#section_examples .top {
+article .top {
     margin-bottom: 0;
 }
 
-#section_examples .bottom {
+article .bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -199,9 +257,158 @@ li a {
     height: 17rem;
 }
 
-/*------------------x------------------*/
-
-#section_other .container {
+#gallery_button {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 3rem auto;
+    max-width: 25rem;
+    cursor: pointer;
+    text-decoration: none;
 }
+
+#gallery_button p {
+    font-family: 'Limelight', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+#gallery_button p,
+#gallery_button img {
+    grid-area: 1/1;
+    place-self: center center;
+}
+
+@media (min-width: 650px) {
+
+    #section_examples h1,
+    #section_other h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        overflow: auto;
+        white-space: normal;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    article {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: none;
+        margin: 0.5rem;
+    }
+
+    article:nth-last-child(1) {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 950px) {
+    .container {
+        overflow: auto;
+        white-space: normal;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    article {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: none;
+        margin: 0.5rem;
+    }
+
+    article:nth-last-child(1) {
+        grid-column: span 1;
+    }
+}
+
+/*------------------artwork------------------*/
+
+#section_artwork .right {
+    background-color: white;
+    padding: 1.3rem;
+    margin-top: 0;
+}
+
+#section_artwork h2 {
+    font-family: 'Assistant', sans-serif;
+    color: #E5B829;
+    margin: 0;
+}
+
+#section_artwork h3 {
+    font-family: 'Assistant', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: #707070;
+    margin: 0.5rem 0;
+}
+
+#section_artwork h4 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+#section_artwork p {
+    font-family: 'Assistant', sans-serif;
+    margin-top: 3rem;
+    color: #707070;
+    white-space: normal;
+}
+
+
+@media (min-width:650px) {
+
+    #section_artwork {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    #section_artwork .right {
+        height: 100%;
+        padding: 2rem;
+    }
+
+    #section_artwork h2 {
+        font-family: 'Assistant', sans-serif;
+        color: #E5B829;
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    #section_artwork h3 {
+        font-family: 'Assistant', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        color: #707070;
+        margin: 0.5rem 0;
+        font-size: 1.7rem;
+    }
+
+    #section_artwork h4 {
+        font-family: 'Assistant', sans-serif;
+        font-weight: 600;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    #section_artwork p {
+        font-family: 'Assistant', sans-serif;
+        margin-top: 3rem;
+        color: #707070;
+        white-space: normal;
+        font-size: 1.3rem;
+    }
+
+    #section_artwork img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*------------------other------------------*/

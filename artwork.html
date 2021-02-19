@@ -6,26 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Limelight&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gallery.html">Galleri</a></li>
+                <li><a href="about.html">Om</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section id="section_artwork">
-            <article>
+            <div class="left">
                 <img id="art_img">
-            </article>
+            </div>
+            <div class="right">
+                <h2 id="art_name"></h2>
+                <h3 id="art_ist"></h3>
+                <h4 id="art_media"></h4>
+                <h4 id="art_year"></h4>
+                <p id="art_desc"></p>
+            </div>
         </section>
         <section id="section_other">
+            <h1>Måske kan du også lide</h1>
             <div class="container"></div>
         </section>
         <template>
             <article>
-                <img class="other_img">
+                <div class="top">
+                    <img>
+                </div>
+                <div class="bottom">
+                    <div class="text_top">
+                        <h2></h2>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div class="text_bottom">
+                        <button>Læs mere</button>
+                    </div>
+                </div>
             </article>
         </template>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer_top">
+            <div class="left">
+                <h4>Kontakt os</h4>
+                <p>VNDU</p>
+                <p>tlf.: +45 20 18 88 77</p>
+                <p>hello@vndu.dk</p>
+            </div>
+            <div class="right">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>® All rights reserved - VNDU</p>
+        </div>
+    </footer>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
@@ -59,6 +111,12 @@
             console.log("showingArtwork");
             document.querySelector("#art_img").src = media + artwork.billede[0];
             document.querySelector("#art_img").alt = artwork.kort;
+            document.querySelector("#art_name").textContent = artwork.navn;
+            document.querySelector("#art_ist").textContent = `Af ${artwork.kunstner}`;
+            document.querySelector("#art_media").textContent = artwork.materiale;
+            document.querySelector("#art_year").textContent = artwork.årstal;
+            document.querySelector("#art_desc").textContent = artwork.lang;
+            document.title = `${artwork.navn}`;
         }
 
         async function loadOtherJSON() {
@@ -83,6 +141,9 @@
                 let clone = template.cloneNode(true).content;
                 clone.querySelector("img").src = media + rngArt.billede[0];
                 clone.querySelector("img").alt = rngArt.kort;
+                clone.querySelector("h2").textContent = rngArt.navn;
+                clone.querySelector("h3").textContent = `Af ${rngArt.kunstner}`;
+                clone.querySelector("p").textContent = rngArt.kort;
                 clone.querySelector("article").addEventListener("click", () => showDetails(rngArt));
                 container.appendChild(clone);
             })
