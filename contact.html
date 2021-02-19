@@ -15,10 +15,201 @@
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
 </head>
 
+
+<style>
+    /*menu fane og dens design på mobiludgaven global*/
+
+    nav {
+        overflow: auto;
+    }
+
+    header {
+        background-color: #D9D0C8;
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .hidden {
+        opacity: 0;
+        z-index: -10;
+
+    }
+
+    #menuknap_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    #menuknap {
+        display: inline-block;
+    }
+
+
+    #oversigt {
+        list-style-type: none;
+        display: block;
+        margin: -8px;
+        padding: 0;
+        position: absolute;
+        background-color: #D9D0C8;
+        width: 100%;
+    }
+
+    ul {
+        text-align: start;
+
+    }
+
+
+    .slide {
+        animation-name: slide_kf;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+    }
+
+    @keyframes slide_kf {
+        0% {
+            transform: translateX(-60vw);
+        }
+
+        100% {
+            transform: translateX(0vw);
+        }
+    }
+
+    li {
+        display: block;
+        margin: 20px;
+        ;
+    }
+
+    li a {
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: #D9D0C8;
+        color: white;
+        font-family: 'Limelight', sans-serif;
+        border: none;
+        padding: 10px;
+        margin: 0px;
+    }
+
+
+
+    a:hover {
+        color: #8d0019;
+    }
+
+
+    #logo_menu {
+        display: flex;
+        width: 20%;
+        justify-content: center;
+
+    }
+
+
+    /* ------- burgermenu icon hvordan den går over i x -----------*/
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 34px;
+        height: 5px;
+        background-color: #f5faff;
+        margin: 6px 20px;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+
+    @media (min-width:650px) {
+
+
+        /*      ------------brugermanu og nav global------------*/
+
+
+        #global {
+            display: flex;
+            position: fixed;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0px 0px;
+            width: 100vw;
+        }
+
+
+        #menuknap {
+            display: none;
+        }
+
+
+        #oversigt.hidden {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        #oversigt li {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-top: 0px;
+        }
+
+
+
+        #oversigt {
+            /*            text-align: end;*/
+            /*            padding-right: 60px;*/
+            /*            margin-top: 10px;*/
+            margin-left: -8px;
+
+            position: relative;
+            text-align: center;
+        }
+
+
+        #logo_menu {
+            display: none;
+            width: 0%;
+            justify-content: center;
+
+        }
+
+</style>
+
+
+
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav id="global">
+            <div id="menuknap_wrapper">
+                <div id="menuknap">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+
+            <ul id="oversigt" class="hidden" class="slide">
+                <div id="logo_menu"><img src="img/logo.svg" alt="logo"></div>
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Om</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
@@ -45,7 +236,36 @@
             <p>® All rights reserved - VNDU</p>
         </div>
     </footer>
-    <script src=""></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+
+        function start() {
+            //Med et klik på menuknappen kaldes funktionen toggleMenu
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+        }
+
+
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+            document.querySelector("#oversigt").classList.toggle("hidden");
+            document.querySelector("#oversigt").classList.toggle("slide");
+            myFunction(this);
+
+            // this henvender sig til menuknappen. Så når man killer på menuknappen, kalder den både togglemenu og myFuncking. Har skrvet nyfincken (this) her for at den så også går med og kalder funktionen nedenunder
+        }
+
+
+        function myFunction(x) {
+
+            x.classList.toggle("change");
+        }
+
+    </script>
 </body>
 
 </html>
