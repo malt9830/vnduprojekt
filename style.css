@@ -412,3 +412,34 @@ article .bottom {
 }
 
 /*------------------gallery------------------*/
+
+#gallery_splash {
+    width: 100%;
+    height: 40vh;
+    background-image: url(img/splash_gallery.svg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#section_gallery h1 {
+    font-family: 'Limelight', sans-serif;
+}
+
+#section_gallery .container {
+    overflow: auto;
+    white-space: normal;
+}
+
+#section_gallery article {
+    max-width: none;
+}
+
+#section_gallery article img {
+    height: auto;
+}
+
+@media (min-width:650px) {
+    #section_gallery h1 {
+        font-size: 2.5rem;
+    }
+}
