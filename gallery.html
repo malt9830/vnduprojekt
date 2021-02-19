@@ -29,6 +29,14 @@
         <div id="gallery_splash"></div>
         <section id="section_gallery">
             <h1>Velkommen i galleriet</h1>
+            <nav>
+                <button data-materiale="Alle" class="selected">Alle</button>
+                <button data-materiale="Akryl">Akryl</button>
+                <button data-materiale="Akvarel">Akvarel</button>
+                <button data-materiale="Farveblyanter">Farveblyanter</button>
+                <button data-materiale="Tuscher">Tuscher</button>
+                <button data-materiale="Digital illustration">Digital</button>
+            </nav>
             <div class="container"></div>
         </section>
         <template>
@@ -73,6 +81,21 @@
             loadJSON();
         })
 
+        //Definerer filtervariabel og -funktion
+        let filter = "Alle";
+        const filterButtons = document.querySelectorAll("#section_gallery nav button");
+        filterButtons.forEach(button => button.addEventListener("click", filterArt));
+
+        function filterArt() {
+            filter = this.dataset.materiale;
+            console.log(filter);
+
+            document.querySelector(".selected").classList.remove("selected");
+            this.classList.add("selected");
+
+            showArt();
+        }
+
         let art;
 
         //Definerer konstanter til senere brug for fetch af json
@@ -94,21 +117,24 @@
         function showArt() {
             console.log("showingArt");
             console.log(art);
+            //Definerer konstanter til senere brug i kloningen af template
+            const template = document.querySelector("template");
+            const container = document.querySelector(".container")
+            container.textContent = "";
 
             art.forEach(artwork => {
-                //Definerer konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
-                const container = document.querySelector(".container")
-
-                //Kloner template og udfylder det med data fra de tilfældige objekter
-                let clone = template.cloneNode(true).content;
-                clone.querySelector("img").src = media + artwork.billede[0];
-                clone.querySelector("img").alt = artwork.kort;
-                clone.querySelector("h2").textContent = artwork.navn;
-                clone.querySelector("h3").textContent = `Af ${artwork.kunstner}`;
-                clone.querySelector("p").textContent = artwork.kort;
-                clone.querySelector("article").addEventListener("click", () => showDetails(artwork));
-                container.appendChild(clone);
+                if (filter == "Alle" || filter == artwork.materiale) {
+                    console.log("looping");
+                    //Kloner template og udfylder det med data fra de tilfældige objekter
+                    let clone = template.cloneNode(true).content;
+                    clone.querySelector("img").src = media + artwork.billede[0];
+                    clone.querySelector("img").alt = artwork.kort;
+                    clone.querySelector("h2").textContent = artwork.navn;
+                    clone.querySelector("h3").textContent = `Af ${artwork.kunstner}`;
+                    clone.querySelector("p").textContent = artwork.kort;
+                    clone.querySelector("article").addEventListener("click", () => showDetails(artwork));
+                    container.appendChild(clone);
+                }
             })
         }
 
