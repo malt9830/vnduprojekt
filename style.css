@@ -655,6 +655,23 @@ article .bottom {
     color: white;
 }
 
+#section_form input,
+#section_form textarea {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.3rem;
+    background-color: #FFDDDD;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 2px solid white;
+    color: #3E3D3D;
+}
+
+#section_form textarea {
+    height: 10rem;
+    resize: none;
+}
+
 #form_button {
     display: grid;
     margin: 3rem auto;
@@ -684,6 +701,7 @@ article .bottom {
 #info_cols {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    padding: 1rem;
 }
 
 #info_cols .col_left {
@@ -693,6 +711,7 @@ article .bottom {
 #info_cols p {
     font-family: 'Assistant', sans-serif;
     color: #707070;
+    font-size: 1.3rem;
 }
 
 @media (min-width: 650px) {
