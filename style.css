@@ -677,8 +677,28 @@ article .bottom {
     place-self: center center;
 }
 
+#section_info h1 {
+    font-family: 'Limelight', sans-serif;
+}
+
+#info_cols {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#info_cols .col_left {
+    font-weight: 600;
+}
+
+#info_cols p {
+    font-family: 'Assistant', sans-serif;
+    color: #707070;
+}
+
 @media (min-width: 650px) {
-    #section_form h1 {
+
+    #section_form h1,
+    #section_info h1 {
         font-size: 2.5rem;
     }
 }
