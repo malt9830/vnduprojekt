@@ -12,7 +12,7 @@ img {
 
 section {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 5rem auto;
     padding: 1rem;
 }
 
@@ -139,9 +139,7 @@ li a:hover {
 
 
 @media (min-width:650px) {
-
-    /*      ------------brugermanu og nav global------------*/
-
+    /*------------brugermanu og nav global------------*/
 
     #global {
         display: flex;
@@ -150,6 +148,7 @@ li a:hover {
         justify-content: center;
         padding: 0px 0px;
         width: 100vw;
+        z-index: 1
     }
 
     #menuknap_wrapper {
@@ -635,3 +634,63 @@ article .bottom {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/*------------------contact------------------*/
+
+.none {
+    display: none;
+}
+
+#section_mouth {}
+
+#wrapper_form {
+    margin: 0 auto;
+    background-color: #F3ACA9;
+}
+
+#section_form {}
+
+#section_form h1 {
+    font-family: 'Limelight', sans-serif;
+    color: white;
+}
+
+#form_button {
+    display: grid;
+    margin: 3rem auto;
+    max-width: 15rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#form_button p {
+    font-family: 'Limelight', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+#form_button p,
+#form_button img {
+    grid-area: 1/1;
+    place-self: center center;
+}
+
+@media (min-width: 650px) {
+    #section_form h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 950px) {
+    #section_mouth img:nth-child(1) {
+        display: none;
+    }
+
+    #section_mouth img:nth-child(2) {
+        display: block;
+    }
+}
+
+]
