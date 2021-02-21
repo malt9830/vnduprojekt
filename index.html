@@ -17,8 +17,17 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav id="global">
+            <div id="menuknap_wrapper">
+                <div id="menuknap">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+
+            <ul id="oversigt" class="hidden" class="slide">
+                <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Om</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
@@ -91,7 +100,8 @@
             <p>® All rights reserved - VNDU</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/burger.js"></script>
 </body>
 
 </html>
