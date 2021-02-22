@@ -15,60 +15,6 @@
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
 </head>
 
-<style>
-    #section_artwork {
-        width: 80%;
-        margin-bottom: 0;
-        margin-top: 8rem;
-    }
-
-    #section_other {
-        width: 80%;
-    }
-
-    .read_more:hover {
-        background: #F3ACA9 !important;
-        border-color: #F3ACA9 !important;
-        animation: screenshot_scale 0.2s infinite;
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-    }
-
-
-    @keyframes screenshot_scale {
-        0% {
-            transform: scale(1);
-        }
-
-        100% {
-            transform: scale(1.03);
-        }
-    }
-
-    .tilbage_knap {
-        font-family: 'Assistant', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 600;
-        background: #FCBF2F;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-        border: 2px solid #FCBF2F;
-        margin-top: 1rem;
-        cursor: pointer;
-    }
-
-    .tilbage_knap:hover {
-        background: #F3ACA9 !important;
-        border-color: #F3ACA9 !important;
-        animation: screenshot_scale 0.2s infinite;
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-    }
-</style>
-
 <body>
     <header>
         <nav id="global">
@@ -98,13 +44,10 @@
                 <h4 id="art_media"></h4>
                 <h4 id="art_year"></h4>
                 <p id="art_desc"></p>
-            </div>
-
-            <div class="text_bottom">
-                <button class="tilbage_knap">Tilbage</button>
-            </div>
+            </div><div class="text_bottom">
+    <a href="javascript:history.back()" class="tilbage_knap">Tilbage</a>
+</div>
         </section>
-
         <section id="section_other">
             <h1>Måske kan du også lide</h1>
             <div class="container"></div>
@@ -147,4 +90,6 @@
     </footer>
     <script src="scripts/artwork.js"></script>
     <script src="scripts/burger.js"></script>
-</body></html>
+</body>
+
+</html>

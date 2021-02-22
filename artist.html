@@ -7,28 +7,6 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    .read_more:hover {
-        background: #F3ACA9 !important;
-        border-color: #F3ACA9 !important;
-        animation: screenshot_scale 0.2s infinite;
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-    }
-
-
-    @keyframes screenshot_scale {
-        0% {
-            transform: scale(1);
-        }
-
-        100% {
-            transform: scale(1.03);
-        }
-    }
-
-</style>
 
 <body>
     <header>
@@ -51,6 +29,13 @@
     <section id="section_gallery">
         <h1></h1>
         <div class="container"></div>
+        <a href="gallery.html" id="gallery_button">
+            <img src="img/buttons/button_yellow.svg" alt="gallery button">
+            <p>Se hele galleriet her</p>
+        </a>
+        <div class="text_bottom">
+            <a href="javascript:history.back()" class="tilbage_knap">Tilbage</a>
+        </div>
     </section>
     <template>
         <article>
@@ -88,6 +73,7 @@
         </div>
     </footer>
     <script src="scripts/artist.js"></script>
+    <script src="scripts/burger.js"></script>
 </body>
 
 </html>

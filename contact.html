@@ -15,115 +15,6 @@
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
 </head>
 
-
-
-<style>
-    /*    menuen */
-    #oversigt {
-        padding: 65px 0px;
-    }
-
-    #kontakt_text {
-        color: #8d0019;
-    }
-
-
-    #logo_menu {
-        display: inline-block;
-        position: absolute;
-        width: 23%;
-        left: 40%;
-        top: 4%;
-        z-index: 20;
-    }
-
-    @media (min-width:650px) {
-        #oversigt {
-            padding: 20px 0px;
-        }
-
-
-        #logo_menu {
-            width: 8%;
-            left: 3%;
-            top: 30%;
-        }
-
-    }
-
-
-
-    /*    contact*/
-
-
-
-    #section_info a {
-        text-decoration: none;
-        color: #707070;
-        position: relative;
-
-    }
-
-    #section_info a.kontaktlink::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        background-color: #8d0019;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.3s ease-in-out 0s;
-    }
-
-    #section_info a.kontaktlink:hover::before {
-        visibility: visible;
-        transform: scaleX(1);
-    }
-
-    #section_info a.kontaktlink:hover {
-        color: #8d0019;
-    }
-
-
-    #section_info a.kontaktlink:active {
-        color: #8d0019;
-    }
-
-    #section_info a.kontaktlink:hover {
-        color: #8d0019;
-    }
-
-
-
-
-    #section_mouth h1 {
-        font-family: 'Limelight', sans-serif;
-        margin-top: 0;
-
-    }
-
-    @media (min-width: 650px) {
-
-        #section_form h1,
-        #section_info h1,
-        #section_mouth h1 {
-            font-size: 2.5rem;
-        }
-    }
-
-    @media (min-width: 950px) {
-        #section_mouth img:nth-child(2) {
-            display: none;
-        }
-
-        #section_mouth img:nth-child(3) {
-            display: block;
-        }
-
-</style>
-
 <body>
     <header>
         <nav id="global">
@@ -138,7 +29,7 @@
             <ul id="oversigt" class="hidden" class="slide">
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Om</a></li>
-                <li><a id="kontakt_text" href="contact.html">Kontakt</a></li>
+                <li><a href="contact.html" class="current">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -175,17 +66,12 @@
             <h1>The old fashioned way</h1>
             <div id="info_cols">
                 <div class="col_left">
-                    <p>Telefon</p>
-                    <p>E-mail</p>
+                    <p>Telefon:</p>
+                    <p>E-mail:</p>
                 </div>
                 <div class="col_right">
-                    <p>Telefon: <a class="kontaktlink" href="tel:20188877" target="_blank">+45 20 18 88 77</a></p>
-                    <p>E-mail: <a class="kontaktlink" href="mailto:hello@vndu.dk" target="_blank">hello@vndu.dk</a></p>
-                    <!--
-                    <p class="kontaktlink">+45 20 18 88 77</p>
-                    <p class="kontaktlink">hello@vndu.dk</p>
-
--->
+                    <p><a class="kontaktlink" href="tel:20188877" target="_blank">+45 20 18 88 77</a></p>
+                    <p><a class="kontaktlink" href="mailto:hello@vndu.dk" target="_blank">hello@vndu.dk</a></p>
                 </div>
             </div>
         </section>
