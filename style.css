@@ -209,6 +209,10 @@ footer p {
     margin: 0;
 }
 
+footer i {
+    cursor: pointer;
+}
+
 footer .left {
     margin-bottom: 2.5rem;
 }
