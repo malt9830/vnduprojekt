@@ -860,8 +860,8 @@ article .bottom {
 @media (min-width:650px) {
     #about_grid {
         display: grid;
-        grid-template-columns: 45% 55%;
-        grid-gap: 1rem;
+        grid-template-columns: 9fr 11fr;
+        grid-gap: 2rem;
     }
 
     #section_about h1,
@@ -899,7 +899,7 @@ article .bottom {
 
 @media (min-width: 950px) {
     #about_grid {
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 1fr 2fr;
     }
 
     #title_small {
