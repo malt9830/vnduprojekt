@@ -55,14 +55,54 @@
 
     /*    contact*/
 
+
+
+    #section_info a {
+        text-decoration: none;
+        color: #707070;
+        position: relative;
+
+    }
+
+    #section_info a.kontaktlink::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #8d0019;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    #section_info a.kontaktlink:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+    #section_info a.kontaktlink:hover {
+        color: #8d0019;
+    }
+
+
+    #section_info a.kontaktlink:active {
+        color: #8d0019;
+    }
+
+    #section_info a.kontaktlink:hover {
+        color: #8d0019;
+    }
+
+
+
+
     #section_mouth h1 {
         font-family: 'Limelight', sans-serif;
         margin-top: 0;
 
     }
-
-
-
 
     @media (min-width: 650px) {
 
@@ -139,8 +179,13 @@
                     <p>E-mail</p>
                 </div>
                 <div class="col_right">
-                    <p>+45 20 18 88 77</p>
-                    <p>hello@vndu.dk</p>
+                    <p>Telefon: <a class="kontaktlink" href="tel:20188877" target="_blank">+45 20 18 88 77</a></p>
+                    <p>E-mail: <a class="kontaktlink" href="mailto:hello@vndu.dk" target="_blank">hello@vndu.dk</a></p>
+                    <!--
+                    <p class="kontaktlink">+45 20 18 88 77</p>
+                    <p class="kontaktlink">hello@vndu.dk</p>
+
+-->
                 </div>
             </div>
         </section>
