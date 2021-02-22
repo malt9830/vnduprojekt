@@ -7,6 +7,28 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .read_more:hover {
+        background: #F3ACA9 !important;
+        border-color: #F3ACA9 !important;
+        animation: screenshot_scale 0.2s infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+
+    @keyframes screenshot_scale {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.03);
+        }
+    }
+
+</style>
 
 <body>
     <header>
@@ -42,7 +64,7 @@
                     <p></p>
                 </div>
                 <div class="text_bottom">
-                    <button>Læs mere</button>
+                    <button class="read_more">Læs mere</button>
                 </div>
             </div>
         </article>
