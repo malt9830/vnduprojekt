@@ -881,6 +881,20 @@ article .bottom {
     .name_large {
         display: block;
     }
+
+    .grid_right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_text div:last-child {
+        text-align: left;
+    }
 }
 
 @media (min-width: 950px) {
@@ -894,19 +908,5 @@ article .bottom {
 
     #title_large {
         display: block;
-    }
-
-    .grid_right {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .grid_left {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .grid_text div:last-child {
-        text-align: left;
     }
 }
