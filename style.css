@@ -808,6 +808,10 @@ article .bottom {
     display: none;
 }
 
+.button_artist {
+    cursor: pointer;
+}
+
 .grid_text div:last-child {
     text-align: center;
     margin: 3rem auto;
@@ -860,8 +864,8 @@ article .bottom {
 @media (min-width:650px) {
     #about_grid {
         display: grid;
-        grid-template-columns: 45% 55%;
-        grid-gap: 1rem;
+        grid-template-columns: 9fr 11fr;
+        grid-gap: 2rem;
     }
 
     #section_about h1,
@@ -881,11 +885,25 @@ article .bottom {
     .name_large {
         display: block;
     }
+
+    .grid_right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid_text div:last-child {
+        text-align: left;
+    }
 }
 
 @media (min-width: 950px) {
     #about_grid {
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 1fr 2fr;
     }
 
     #title_small {
@@ -894,19 +912,5 @@ article .bottom {
 
     #title_large {
         display: block;
-    }
-
-    .grid_right {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .grid_left {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .grid_text div:last-child {
-        text-align: left;
     }
 }
