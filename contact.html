@@ -18,6 +18,7 @@
 
 
 <style>
+    /*    menuen */
     #oversigt {
         padding: 65px 0px;
     }
@@ -50,6 +51,37 @@
 
     }
 
+
+
+    /*    contact*/
+
+    #section_mouth h1 {
+        font-family: 'Limelight', sans-serif;
+        margin-top: 0;
+
+    }
+
+
+
+
+    @media (min-width: 650px) {
+
+        #section_form h1,
+        #section_info h1,
+        #section_mouth h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (min-width: 950px) {
+        #section_mouth img:nth-child(2) {
+            display: none;
+        }
+
+        #section_mouth img:nth-child(3) {
+            display: block;
+        }
+
 </style>
 
 <body>
@@ -72,6 +104,7 @@
     </header>
     <main>
         <section id="section_mouth">
+            <h1>Kontakt os</h1>
             <img src="img/contact_mouth_small.svg" alt="contact mouth for phone and tablet">
             <img src="img/contact_mouth_large.svg" alt="contact mouth for desktop" class="none">
         </section>
