@@ -29,7 +29,8 @@ function showArt() {
     const other1 = art[Math.floor(Math.random() * art.length)]
     const other2 = art[Math.floor(Math.random() * art.length)]
     const other3 = art[Math.floor(Math.random() * art.length)]
-    const randomArt = [other1, other2, other3];
+    const other4 = art[Math.floor(Math.random() * art.length)]
+    const randomArt = [other1, other2, other3, other4];
     console.log(randomArt);
 
     randomArt.forEach(artwork => {
