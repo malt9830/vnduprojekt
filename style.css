@@ -642,14 +642,10 @@ article .bottom {
     display: none;
 }
 
-#section_mouth {}
-
 #wrapper_form {
     margin: 0 auto;
     background-color: #F3ACA9;
 }
-
-#section_form {}
 
 #section_form h1 {
     font-family: 'Limelight', sans-serif;
@@ -735,13 +731,20 @@ article .bottom {
 
 /*------------------about------------------*/
 
-#section_about h1 {
+#section_about h1,
+#section_artists h1 {
     font-family: 'Limelight', sans-serif;
 }
 
-#section_about p {
+#section_about p,
+#section_artists p {
     font-family: 'Assistant', sans-serif;
     margin: 1rem 0;
+}
+
+.name_small p,
+.name_large p {
+    font-weight: 600;
 }
 
 #title_large {
@@ -750,6 +753,43 @@ article .bottom {
 
 #about_grid div:nth-child(1) {
     margin-bottom: 3rem;
+}
+
+#section_artists {
+    max-width: none;
+    padding: 0;
+}
+
+.name_large {
+    display: none;
+}
+
+.grid_text div:last-child {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.grid_text a {
+    font-family: 'Assistant';
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    background-color: #FCBF2F;
+    padding: 0.5rem 3rem;
+}
+
+.grid_right,
+.grid_left {
+    grid-gap: 1rem;
+    grid-auto-flow: column;
+}
+
+.grid_right .grid_text {
+    grid-column: 1;
+}
+
+.grid_right .grid_img {
+    grid-column: 2;
 }
 
 #wrapper_blue {
@@ -765,6 +805,7 @@ article .bottom {
 #wrapper_red {
     margin: 0 auto;
     background-color: #C17469;
+    color: white;
 }
 
 #wrapper_pink {
@@ -776,21 +817,31 @@ article .bottom {
     #about_grid {
         display: grid;
         grid-template-columns: 45% 55%;
-        grid-gap: 2rem;
+        grid-gap: 1rem;
     }
 
-    #section_about h1 {
+    #section_about h1,
+    #section_artists h1 {
         font-size: 2.5rem;
     }
 
-    #section_about p {
+    #section_about p,
+    #section_artists p {
         font-size: 1.3rem;
+    }
+
+    .name_small {
+        display: none;
+    }
+
+    .name_large {
+        display: block;
     }
 }
 
 @media (min-width: 950px) {
     #about_grid {
-        grid-template-columns: 35% 65%
+        grid-template-columns: 35% 65%;
     }
 
     #title_small {
@@ -799,5 +850,19 @@ article .bottom {
 
     #title_large {
         display: block;
+    }
+
+    .grid_right {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .grid_left {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .grid_text div:last-child {
+        text-align: left;
     }
 }
