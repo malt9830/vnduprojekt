@@ -808,6 +808,10 @@ article .bottom {
     display: none;
 }
 
+.button_artist {
+    cursor: pointer;
+}
+
 .grid_text div:last-child {
     text-align: center;
     margin: 3rem auto;
@@ -882,7 +886,7 @@ article .bottom {
         display: block;
     }
 
-    .button_artist .grid_right {
+    .grid_right {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
