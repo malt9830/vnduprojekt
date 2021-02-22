@@ -509,7 +509,7 @@ article .bottom {
     }
 
     article:nth-last-child(1) {
-        grid-column: span 1;
+        display: none;
     }
 }
 
