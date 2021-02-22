@@ -508,8 +508,8 @@ article .bottom {
         margin: 0.5rem;
     }
 
-    article:nth-last-child(1) {
-        grid-column: span 1;
+    #section_other article:nth-last-child(1) {
+        display: none;
     }
 }
 

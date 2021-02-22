@@ -58,7 +58,8 @@ function showOther() {
     const other1 = otherArt[Math.floor(Math.random() * otherArt.length)];
     const other2 = otherArt[Math.floor(Math.random() * otherArt.length)];
     const other3 = otherArt[Math.floor(Math.random() * otherArt.length)];
-    const randomArt = [other1, other2, other3];
+    const other4 = otherArt[Math.floor(Math.random() * otherArt.length)];
+    const randomArt = [other1, other2, other3, other4];
     console.log(randomArt);
 
     randomArt.forEach(rngArt => {
