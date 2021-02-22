@@ -882,7 +882,7 @@ article .bottom {
         display: block;
     }
 
-    .grid_right {
+    .button_artist .grid_right {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
