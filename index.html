@@ -13,6 +13,57 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #landing h2 {
+            font-family: 'Assistant', sans-serif;
+            color: #E5B829;
+            font-weight: 100;
+            margin: 2rem 0 0 0;
+        }
+
+
+        .fa-chevron-down {
+            text-decoration: none;
+            margin-top: 12px;
+        }
+
+        #gallery_button:hover {
+            animation: screenshot_scale 0.2s infinite;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        @keyframes screenshot_scale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.03);
+            }
+        }
+
+        @media (min-width:650px) {
+            #landing h2 {
+                margin: -2rem 0 0 0;
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 950px) {
+            #landing_text_bottom {
+                line-height: 2rem;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -48,16 +99,20 @@
                             <div id="landing_d" class="landing_letter">D</div>
                             <div id="landing_u" class="landing_letter">U</div>
                         </div>
+                        <h2>et online udstillingsvindue</h2>
                     </div>
                 </div>
             </div>
-            <i class="fas fa-chevron-down"></i>
+            <a href="#section_welcome" class="fas fa-chevron-down"> </a>
+
+            <!--                        <i class="fas fa-chevron-down"></i>        -->
         </div>
+
         <section id="section_welcome">
             <img src="img/mouth.svg" alt="the welcoming mouth">
         </section>
         <section id="section_examples">
-            <h1>VNDU, et online-galleri</h1>
+            <!--            <h1>VNDU, et online-galleri</h1>-->
             <div class="container"></div>
             <a href="gallery.html" id="gallery_button">
                 <img src="img/buttons/button_yellow.svg" alt="gallery button">
