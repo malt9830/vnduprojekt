@@ -15,6 +15,43 @@
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
 </head>
 
+
+
+<style>
+    #oversigt {
+        padding: 65px 0px;
+    }
+
+    #kontakt_text {
+        color: #8d0019;
+    }
+
+
+    #logo_menu {
+        display: inline-block;
+        position: absolute;
+        width: 23%;
+        left: 40%;
+        top: 4%;
+        z-index: 20;
+    }
+
+    @media (min-width:650px) {
+        #oversigt {
+            padding: 20px 0px;
+        }
+
+
+        #logo_menu {
+            width: 8%;
+            left: 3%;
+            top: 30%;
+        }
+
+    }
+
+</style>
+
 <body>
     <header>
         <nav id="global">
@@ -24,12 +61,12 @@
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
+                <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
             </div>
             <ul id="oversigt" class="hidden" class="slide">
-                <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Om</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a id="kontakt_text" href="contact.html">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -95,4 +132,6 @@
         </div>
     </footer>
     <script src="scripts/burger.js"></script>
-</body></html>
+</body>
+
+</html>
