@@ -42,7 +42,7 @@
         <div id="wrapper_form">
             <section id="section_form">
                 <h1>Send en besked</h1>
-                <form>
+                <form netlify>
                     <div>
                         <label for="name"></label>
                         <input id="name" name="name" type="text" placeholder="Hvad er dit navn?">
@@ -55,11 +55,11 @@
                         <label for="message"></label>
                         <textarea id="message" name="message" type="text" placeholder="Hvad har du på hjerte?"></textarea>
                     </div>
+                    <button id="form_button" type="submit">
+                        <img src="img/buttons/button_red.svg" alt="form button">
+                        <p>SEND</p>
+                    </button>
                 </form>
-                <div id="form_button">
-                    <img src="img/buttons/button_red.svg" alt="form button">
-                    <p>SEND</p>
-                </div>
             </section>
         </div>
         <section id="section_info">

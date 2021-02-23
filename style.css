@@ -838,6 +838,8 @@ article .bottom {
     max-width: 15rem;
     cursor: pointer;
     text-decoration: none;
+    border: none;
+    background-color: transparent;
 }
 
 #form_button p {
