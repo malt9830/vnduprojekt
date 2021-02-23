@@ -396,9 +396,7 @@ html {
         font-size: 2rem;
     }
 
-    #section_welcome {
-        max-width: 900px;
-    }
+    #section_welcome {}
 }
 
 @media (min-width: 1200px) {
@@ -431,7 +429,7 @@ html {
 /*------------------welcome------------------*/
 
 #section_welcome {
-    padding: 7rem 0;
+    height: 62vw;
 }
 
 /*------------------examples------------------*/
