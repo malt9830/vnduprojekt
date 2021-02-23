@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
 
     <style>
+        /*        placering af logoets dele*/
         .logo_container {
             display: flex;
             justify-content: center;
@@ -23,12 +24,12 @@
             flex-wrap: nowrap;
         }
 
-        /*                animation for logoet ved load*/
+        /*        animationer for hver væg i logoet ved load*/
 
         .left_wall {
             animation: flyin_left 1.5s ease forwards;
             opacity: 0;
-            transform: scale(2.5);
+            transform: scale(2);
             filter: blur(4px);
         }
 
@@ -43,7 +44,7 @@
         .middle_wall {
             animation: flyin_middle 3s ease forwards;
             opacity: 0;
-            transform: scale(0.5);
+            transform: scale(0.7);
         }
 
         @keyframes flyin_middle {
@@ -69,6 +70,7 @@
             }
         }
 
+        /*responsiveness for logoets dele*/
 
         @media (min-width:650px) {
 
@@ -117,7 +119,6 @@
                 #landing_text {
                     place-self: center center;
                 }
-
             }
 
     </style>
@@ -146,13 +147,15 @@
         <div id="landing">
             <div id="landing_content">
                 <div id="landing_grid">
-                    <!--                    <div><img src="img/logo.svg" alt="logo"></div>-->
 
+                    <!--logoets tre dele-->
                     <div class="logo_container">
                         <div class="left_wall"><img src="img/logo_parts/logo_pink.svg" alt="left wall"></div>
                         <div class="middle_wall"><img src="img/logo_parts/logo_red.svg" alt="middle wall"></div>
                         <div class="right_wall"><img src="img/logo_parts/logo_gul.svg" alt="irght wall"></div>
                     </div>
+
+                    <!--Tekst på "splash" område-->
                     <div id="landing_text">
                         <div id="landing_text_top">
                             <div id="landing_v" class="landing_letter">V</div>
@@ -166,16 +169,21 @@
                     </div>
                 </div>
             </div>
+
+            <!--pil til scroll-->
             <a href="#section_welcome" class="fas fa-chevron-down"> </a>
 
-            <!--                        <i class="fas fa-chevron-down"></i>        -->
         </div>
+
+        <!--sektion for dynamisk mund -->
 
         <section id="section_welcome">
             <img src="img/mouth.svg" alt="the welcoming mouth">
         </section>
+
+        <!--Eksempler fra galleri + navigation til single view og galleri-->
+
         <section id="section_examples">
-            <!--            <h1>VNDU, et online-galleri</h1>-->
             <div class="container"></div>
             <a href="gallery.html" id="gallery_button">
                 <img src="img/buttons/button_yellow.svg" alt="gallery button">
@@ -200,6 +208,9 @@
             </article>
         </template>
     </main>
+
+<!--    footer-->
+
     <footer>
         <div class="footer_top">
             <div class="left">
