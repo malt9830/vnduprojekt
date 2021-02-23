@@ -34,6 +34,7 @@ function showArt() {
     const container = document.querySelector(".container")
     container.textContent = "";
     document.querySelector("h1").textContent = `${id.split("_").join(" ")}s kunst`
+    document.title = id.split("_").join(" ");
 
     art.forEach(artwork => {
         //Definerer filter ud fra objektets kunstner

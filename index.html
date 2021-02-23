@@ -13,6 +13,116 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <script src="https://kit.fontawesome.com/2c784390b6.js" crossorigin="anonymous"></script>
+
+    <style>
+        /*        placering af logoets dele*/
+        .logo_container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            height: 100%;
+            flex-wrap: nowrap;
+        }
+
+        /*        animationer for hver væg i logoet ved load*/
+
+        .left_wall {
+            animation: flyin_left 1.5s ease forwards;
+            opacity: 0;
+            transform: scale(2);
+            filter: blur(4px);
+        }
+
+        @keyframes flyin_left {
+            to {
+                filter: blur(0);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .middle_wall {
+            animation: flyin_middle 3s ease forwards;
+            opacity: 0;
+            transform: scale(0.7);
+        }
+
+        @keyframes flyin_middle {
+            to {
+                filter: blur(0);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .right_wall {
+            animation: flyin_right 2.5s ease forwards;
+            opacity: 0;
+            transform: scale(3.5);
+            filter: blur(0px);
+        }
+
+        @keyframes flyin_right {
+            to {
+                filter: blur(0);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /*responsiveness for logoets dele*/
+
+        @media (min-width:650px) {
+
+            .logo_container {
+                display: flex;
+                justify-content: flex-end;
+                justify-items: center;
+                flex-direction: row;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                max-width: 550px;
+                max-height: 400px;
+            }
+
+            .left_wall img,
+            .middle_wall img,
+            .right_wall img {
+                max-height: 400px;
+            }
+
+            @media (min-width:725px) {
+
+                .logo_container {
+                    margin-left: 10vw;
+                }
+            }
+
+            @media (min-width:950px) {
+                .logo_container {
+                    margin: 0 2vw 0 0;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                .landing_letter {
+                    font-size: 13vw;
+                }
+
+                #landing_text_top,
+                #landing_text_bottom {
+                    display: inline-block;
+                    line-height: normal;
+                }
+
+                #landing_text {
+                    place-self: center center;
+                }
+            }
+
+    </style>
+
 </head>
 
 <body>
@@ -25,7 +135,6 @@
                     <div class="bar3"></div>
                 </div>
             </div>
-
             <ul id="oversigt" class="hidden" class="slide">
                 <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
                 <li><a href="gallery.html">Galleri</a></li>
@@ -38,7 +147,15 @@
         <div id="landing">
             <div id="landing_content">
                 <div id="landing_grid">
-                    <div><img src="img/logo.svg" alt="logo"></div>
+
+                    <!--logoets tre dele-->
+                    <div class="logo_container">
+                        <div class="left_wall"><img src="img/logo_parts/logo_pink.svg" alt="left wall"></div>
+                        <div class="middle_wall"><img src="img/logo_parts/logo_red.svg" alt="middle wall"></div>
+                        <div class="right_wall"><img src="img/logo_parts/logo_gul.svg" alt="irght wall"></div>
+                    </div>
+
+                    <!--Tekst på "splash" område-->
                     <div id="landing_text">
                         <div id="landing_text_top">
                             <div id="landing_v" class="landing_letter">V</div>
@@ -52,16 +169,21 @@
                     </div>
                 </div>
             </div>
+
+            <!--pil til scroll-->
             <a href="#section_welcome" class="fas fa-chevron-down"> </a>
 
-            <!--                        <i class="fas fa-chevron-down"></i>        -->
         </div>
+
+        <!--sektion for dynamisk mund -->
 
         <section id="section_welcome">
             <img src="img/mouth.svg" alt="the welcoming mouth">
         </section>
+
+        <!--Eksempler fra galleri + navigation til single view og galleri-->
+
         <section id="section_examples">
-            <!--            <h1>VNDU, et online-galleri</h1>-->
             <div class="container"></div>
             <a href="gallery.html" id="gallery_button">
                 <img src="img/buttons/button_yellow.svg" alt="gallery button">
@@ -86,6 +208,9 @@
             </article>
         </template>
     </main>
+
+<!--    footer-->
+
     <footer>
         <div class="footer_top">
             <div class="left">
