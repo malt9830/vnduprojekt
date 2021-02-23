@@ -429,7 +429,8 @@ html {
 /*------------------welcome------------------*/
 
 #section_welcome {
-    height: 62vw;
+    height: 43vw;
+    margin: 0;
 }
 
 /*------------------examples------------------*/

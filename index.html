@@ -76,7 +76,7 @@
             height: 100%;
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) scale(0.8);
         }
 
         #lips_container {
@@ -98,6 +98,7 @@
             left: 44vw;
             top: 25vw;
 
+
         }
 
         #tale1_sprite {
@@ -105,6 +106,25 @@
             background-size: cover;
             width: 11vw;
             height: 24vw;
+        }
+
+        .scale {
+            animation: tale_scale 3s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: top;
+            animation-direction: alternate-reverse;
+
+        }
+
+
+        @keyframes tale_scale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scaleY(1.2);
+            }
         }
 
         #tale2_container {
@@ -117,9 +137,29 @@
         #tale2_sprite {
             background-image: url(img/talkinglips/hallojsablue.svg);
             background-size: cover;
-            width: 55vw;
-            height: 23vw;
+            width: 24vw;
+            height: 15vw;
         }
+
+        .scale2 {
+            animation: tale_scale2 4s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: top left;
+            animation-direction: alternate-reverse;
+
+        }
+
+
+        @keyframes tale_scale2 {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
 
 
         #tale3_container {
@@ -136,6 +176,30 @@
             height: 18vw;
         }
 
+        .scale3 {
+            animation: tale_scale3 2.5s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: bottom right;
+            animation-direction: alternate-reverse;
+            animation-delay: 1s;
+
+
+        }
+
+
+        @keyframes tale_scale3 {
+            0% {
+                transform: skewY(1deg);
+
+            }
+
+            100% {
+                transform: skewX(20deg);
+
+            }
+        }
+
+
         #tale4_container {
             position: absolute;
             left: 53vw;
@@ -146,8 +210,31 @@
         #tale4_sprite {
             background-image: url(img/talkinglips/Hejdu.svg);
             background-size: cover;
-            width: 24vw;
-            height: 19vw;
+            width: 29vw;
+            height: 23vw;
+        }
+
+        .scale4 {
+            animation: tale_scale4 2s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: top;
+            animation-direction: alternate-reverse;
+            animation-delay: 1s;
+
+
+        }
+
+
+        @keyframes tale_scale4 {
+            0% {
+                transform: scaleY(1);
+
+            }
+
+            100% {
+                transform: skewX(20deg);
+
+            }
         }
 
         #tale5_container {
@@ -164,6 +251,29 @@
             height: 18vw;
         }
 
+        .scale5 {
+            animation: tale_scale5 4s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: bottom left;
+            animation-direction: alternate-reverse;
+
+
+        }
+
+
+        @keyframes tale_scale5 {
+            0% {
+                transform: scaleX(1);
+
+            }
+
+            100% {
+                transform: skewX(-30deg);
+
+            }
+        }
+
+
         #tale6_container {
             position: absolute;
             left: 24vw;
@@ -178,6 +288,30 @@
             height: 16vw;
         }
 
+        .scale6 {
+            animation: tale_scale6 2s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: top left;
+            animation-direction: alternate-reverse;
+            animation-delay: 3s;
+
+
+        }
+
+
+        @keyframes tale_scale6 {
+            0% {
+                transform: scaleX(1);
+
+            }
+
+            100% {
+                transform: skewX(-15deg);
+
+            }
+        }
+
+
         #tale7_container {
             position: absolute;
             left: 18vw;
@@ -188,8 +322,32 @@
         #tale7_sprite {
             background-image: url(img/talkinglips/lookyellow.svg);
             background-size: cover;
-            width: 26vw;
-            height: 9vw;
+            width: 28vw;
+            height: 10vw;
+        }
+
+
+        .scale7 {
+            animation: tale_scale7 2s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: top left;
+            animation-direction: alternate-reverse;
+            animation-delay: 4s;
+
+
+        }
+
+
+        @keyframes tale_scale7 {
+            0% {
+                transform: scaleX(1);
+
+            }
+
+            100% {
+                transform: skewX(-40deg);
+
+            }
         }
 
         #tale8_container {
@@ -206,6 +364,29 @@
             height: 11vw;
         }
 
+        .scale8 {
+            animation: tale_scale8 2s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: bottom;
+            animation-direction: alternate-reverse;
+            animation-delay: 1s;
+
+
+        }
+
+
+        @keyframes tale_scale8 {
+            0% {
+                transform: scaleX(1);
+
+            }
+
+            100% {
+                transform: skewX(40deg);
+
+            }
+        }
+
         #tale9_container {
             position: absolute;
             left: 52vw;
@@ -219,6 +400,29 @@
             width: 28vw;
             height: 19vw;
         }
+
+        .scale9 {
+            animation: tale_scale9 2s infinite;
+            animation-timing-function: ease-in-out;
+            transform-origin: bottom;
+            animation-direction: alternate-reverse;
+
+
+        }
+
+
+        @keyframes tale_scale9 {
+            0% {
+                transform: scaleX(1);
+
+            }
+
+            100% {
+                transform: skew(-30deg);
+
+            }
+        }
+
 
 
         /*responsiveness for logoets dele*/
@@ -271,7 +475,6 @@
                     place-self: center center;
                 }
             }
-
     </style>
 
 </head>
@@ -336,39 +539,39 @@
                     <div id="lips_sprite"></div>
                 </div>
 
-                <div id="tale1_container">
+                <div id="tale1_container" class="scale">
                     <div id="tale1_sprite"></div>
                 </div>
 
-                <div id="tale2_container">
+                <div id="tale2_container" class="scale2">
                     <div id="tale2_sprite"></div>
                 </div>
 
-                <div id="tale3_container">
+                <div id="tale3_container" class="scale3">
                     <div id="tale3_sprite"></div>
                 </div>
 
-                <div id="tale4_container">
+                <div id="tale4_container" class="scale4">
                     <div id="tale4_sprite"></div>
                 </div>
 
-                <div id="tale5_container">
+                <div id="tale5_container" class="scale5">
                     <div id="tale5_sprite"></div>
                 </div>
 
-                <div id="tale6_container">
+                <div id="tale6_container" class="scale6">
                     <div id="tale6_sprite"></div>
                 </div>
 
-                <div id="tale7_container">
+                <div id="tale7_container" class="scale7">
                     <div id="tale7_sprite"></div>
                 </div>
 
-                <div id="tale8_container">
+                <div id="tale8_container" class="scale8">
                     <div id="tale8_sprite"></div>
                 </div>
 
-                <div id="tale9_container">
+                <div id="tale9_container" class="scale9">
                     <div id="tale9_sprite"></div>
                 </div>
 
@@ -425,6 +628,4 @@
     </footer>
     <script src="scripts/script.js"></script>
     <script src="scripts/burger.js"></script>
-</body>
-
-</html>
+</body></html>
