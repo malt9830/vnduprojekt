@@ -344,6 +344,69 @@ footer a.kontaktlink:hover {
     color: #DB0916;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#landing h2 {
+    font-family: 'Assistant', sans-serif;
+    color: #E5B829;
+    font-weight: 100;
+    margin: 1rem 0 0 0;
+}
+
+
+.fa-chevron-down {
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+#gallery_button:hover,
+#form_button:hover {
+    animation: screenshot_scale 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes screenshot_scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+@media (min-width:650px) {
+    #landing h2 {
+        margin: -2rem 0 0 0;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 950px) {
+    #landing_text_bottom {
+        line-height: 2rem;
+    }
+
+    #landing h2 {
+        margin: 0 0 0 0;
+        font-size: 2rem;
+    }
+
+    #section_welcome {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #landing h2 {
+        margin: -2rem 0 0 0;
+    }
+}
+
 @media (min-width:650px) {
 
     #landing_text_top,
@@ -368,7 +431,7 @@ footer a.kontaktlink:hover {
 /*------------------welcome------------------*/
 
 #section_welcome {
-    margin-bottom: 7rem;
+    padding: 7rem 0;
 }
 
 /*------------------examples------------------*/
@@ -508,12 +571,70 @@ article .bottom {
         margin: 0.5rem;
     }
 
-    #section_other article:nth-last-child(1) {
+    #section_other article:nth-last-child(1),
+    #section_examples article:nth-last-child(1) {
         display: none;
     }
 }
 
 /*------------------artwork------------------*/
+
+#section_artwork {
+    width: 80%;
+    margin-bottom: 0;
+    margin-top: 8rem;
+}
+
+#section_other {
+    width: 80%;
+}
+
+.read_more:hover {
+    background: #F3ACA9 !important;
+    border-color: #F3ACA9 !important;
+    animation: screenshot_scale 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes screenshot_scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+.tilbage_knap {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #FCBF2F;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid #FCBF2F;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tilbage_knap:hover {
+    background: #F3ACA9 !important;
+    border-color: #F3ACA9 !important;
+    animation: screenshot_scale 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+#section_artwork div:nth-child(3) {
+    margin-top: 3rem;
+}
 
 #section_artwork .right {
     background-color: white;
@@ -753,6 +874,111 @@ article .bottom {
     font-family: 'Assistant', sans-serif;
     color: #707070;
     font-size: 1.3rem;
+}
+
+/*    menuen */
+#oversigt {
+    padding: 65px 0px;
+}
+
+.current {
+    color: #8d0019;
+}
+
+
+#logo_menu {
+    display: inline-block;
+    position: absolute;
+    width: 23%;
+    left: 40%;
+    top: 4%;
+    z-index: 20;
+}
+
+@media (min-width:650px) {
+    #oversigt {
+        padding: 20px 0px;
+    }
+
+
+    #logo_menu {
+        width: 8%;
+        left: 3%;
+        top: 30%;
+    }
+
+}
+
+
+
+/*    contact*/
+
+
+
+#section_info a {
+    text-decoration: none;
+    color: #707070;
+    position: relative;
+
+}
+
+#section_info a.kontaktlink::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #8d0019;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#section_info a.kontaktlink:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#section_info a.kontaktlink:hover {
+    color: #8d0019;
+}
+
+
+#section_info a.kontaktlink:active {
+    color: #8d0019;
+}
+
+#section_info a.kontaktlink:hover {
+    color: #8d0019;
+}
+
+
+
+
+#section_mouth h1 {
+    font-family: 'Limelight', sans-serif;
+    margin-top: 0;
+
+}
+
+@media (min-width: 650px) {
+
+    #section_form h1,
+    #section_info h1,
+    #section_mouth h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 950px) {
+    #section_mouth img:nth-child(2) {
+        display: none;
+    }
+
+    #section_mouth img:nth-child(3) {
+        display: block;
+    }
 }
 
 @media (min-width: 650px) {
