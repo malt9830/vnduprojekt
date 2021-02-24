@@ -396,7 +396,9 @@ html {
         font-size: 2rem;
     }
 
-    #section_welcome {}
+    #section_welcome {
+        height: 43vw;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -428,8 +430,8 @@ html {
 /*------------------welcome------------------*/
 
 #section_welcome {
-    height: 43vw;
-    margin: 0;
+    height: 60vw;
+    margin: 0 auto;
 }
 
 /*------------------examples------------------*/
@@ -628,6 +630,10 @@ article .bottom {
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+}
+
+.tilbage_container {
+    margin-top: 3rem;
 }
 
 #section_artwork div:nth-child(3) {
@@ -889,8 +895,9 @@ article .bottom {
 #logo_menu {
     display: inline-block;
     position: absolute;
-    width: 23%;
-    left: 40%;
+    width: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
     top: 4%;
     z-index: 20;
 }
@@ -900,15 +907,13 @@ article .bottom {
         padding: 20px 0px;
     }
 
-
     #logo_menu {
-        width: 8%;
+        width: 7rem;
         left: 3%;
         top: 30%;
+        transform: translateX(0%);
     }
 }
-
-
 
 /*    contact*/
 
