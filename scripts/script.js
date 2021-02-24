@@ -14,6 +14,8 @@ const options = {
     }
 };
 
+
+// Her hentes json ind fra restdb, og sendes vider til funktionen showArt
 async function loadJSON() {
     //Henter json og gemmer det som art
     const JSONData = await fetch(url, options);
@@ -21,6 +23,9 @@ async function loadJSON() {
     showArt();
 }
 
+
+
+//Her i funktioen genereres tre til fire tilfeldeig andre kunstværker og sættes ind i HTML
 function showArt() {
     console.log("showingArt");
     console.log(art);
@@ -38,18 +43,21 @@ function showArt() {
         const template = document.querySelector("template");
         const container = document.querySelector(".container")
 
-        //Kloner template og udfylder det med data fra de tilfældige objekter
-        let clone = template.cloneNode(true).content;
+
+        let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+
         clone.querySelector("img").src = media + artwork.billede[0];
         clone.querySelector("img").alt = artwork.kort;
         clone.querySelector("h2").textContent = artwork.navn;
         clone.querySelector("h3").textContent = `Af ${artwork.kunstner}`;
         clone.querySelector("p").textContent = artwork.kort;
         clone.querySelector("article").addEventListener("click", () => showDetails(artwork));
-        container.appendChild(clone);
+        container.appendChild(clone); //kolene tilføres til DOM
     })
 }
 
+
+// Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
 function showDetails(artwork) {
     console.log("showDetails");
     location.href = `artwork.html?id=${artwork._id}`;
