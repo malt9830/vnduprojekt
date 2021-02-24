@@ -39,6 +39,7 @@
         <section id="section_gallery">
             <h1>Velkommen i galleriet</h1>
             <nav>
+                <!--Filtreringsknapper til sortering af billeder ift. materiale/type-->
                 <button data-materiale="Alle" class="selected">Alle</button>
                 <button data-materiale="Akryl">Akryl</button>
                 <button data-materiale="Akvarel">Akvarel</button>
@@ -46,8 +47,10 @@
                 <button data-materiale="Tuscher">Tuscher</button>
                 <button data-materiale="Digital">Digital</button>
             </nav>
+            <!--Container af det dynamiske data nedhentet fra restdb som json-->
             <div class="container"></div>
         </section>
+        <!--Templaten som klones,  udfyldes af restdb-objekternes data og indsættes i ovenstående container-->
         <template>
             <article>
                 <div class="top">

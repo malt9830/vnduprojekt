@@ -37,9 +37,11 @@
     </header>
     <main>
         <section id="section_artwork">
+            <!--Den venstre af to kolonner på tablet og desktop og øvre af to rækker på mobil-->
             <div class="left">
                 <img id="art_img">
             </div>
+            <!--Den højre af to kolonner på tablet og desktop og nedre af to rækker på mobil-->
             <div class="right">
                 <h2 id="art_name"></h2>
                 <h3 id="art_ist"></h3>
@@ -53,8 +55,10 @@
         </section>
         <section id="section_other">
             <h1>Måske kan du også lide</h1>
+            <!--Container for de tilfældigt genererede billeder ud fra det hentede json-->
             <div class="container"></div>
         </section>
+        <!--Templaten der klones og udfyldes af det tilfældige objekter fra json-->
         <template>
             <article>
                 <div class="top">
