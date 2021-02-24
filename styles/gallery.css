@@ -199,6 +199,7 @@ article .bottom {
     flex-direction: row;
     justify-content: space-between;
     background: #FCBF2F;
+    text-decoration: none;
 }
 
 #dropdown_items {
