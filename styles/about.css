@@ -11,6 +11,8 @@
     font-weight: 600;
 }
 
+/*skjul af titlens desktopversion*/
+
 #title_large {
     display: none;
 }
@@ -46,6 +48,8 @@
     padding: 0.5rem 3rem;
 }
 
+/*stilering af kolonnerne*/
+
 .grid_right,
 .grid_left {
     grid-gap: 1rem;
@@ -59,6 +63,8 @@
 .grid_right .grid_img {
     grid-column: 2;
 }
+
+/*baggrundsfarve til de 4 undersektioner*/
 
 #wrapper_blue {
     margin: 0 auto;
@@ -93,6 +99,8 @@
         font-size: 1.3rem;
     }
 
+    /*omvendelse af display-attributen for hhv. mobil/tablet- og desktopversionen*/
+
     .name_small {
         display: none;
     }
@@ -100,6 +108,8 @@
     .name_large {
         display: block;
     }
+
+    /*definition af grid for tablet- og desktopversion*/
 
     .grid_right {
         display: grid;
@@ -117,9 +127,14 @@
 }
 
 @media (min-width: 950px) {
+
+    /*definition af grid for landingens kolonner*/
+
     #about_grid {
         grid-template-columns: 1fr 2fr;
     }
+
+    /*omvendelse af den synlige titel på landing*/
 
     #title_small {
         display: none;

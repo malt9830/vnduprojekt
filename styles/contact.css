@@ -1,8 +1,9 @@
 /*------------------mouth------------------*/
 
+/*styring af hvilken mund afhænging af skærmens bredde*/
+
 #section_mouth h1 {
     margin-top: 0;
-
 }
 
 @media (min-width: 950px) {
@@ -38,10 +39,14 @@
     color: #3E3D3D;
 }
 
+/*fjern muligheden for ændring af text-boblens størrelse i formen*/
+
 #section_form textarea {
     height: 10rem;
     resize: none;
 }
+
+/*stilering og placering af formularens knap*/
 
 #form_button {
     display: grid;
@@ -90,6 +95,8 @@
     color: #707070;
     position: relative;
 }
+
+/*understregningseffekt til links i kontaktinfo*/
 
 #section_info a.kontaktlink::before {
     content: "";

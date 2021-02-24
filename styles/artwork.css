@@ -62,33 +62,18 @@
     }
 
     #section_artwork h2 {
-        font-family: 'Assistant', sans-serif;
-        color: #E5B829;
-        margin: 0;
         font-size: 3rem;
     }
 
     #section_artwork h3 {
-        font-family: 'Assistant', sans-serif;
-        font-style: italic;
-        font-weight: 300;
-        color: #707070;
-        margin: 0.5rem 0;
         font-size: 1.7rem;
     }
 
     #section_artwork h4 {
-        font-family: 'Assistant', sans-serif;
-        font-weight: 600;
-        color: black;
         font-size: 1.5rem;
     }
 
     #section_artwork p {
-        font-family: 'Assistant', sans-serif;
-        margin-top: 3rem;
-        color: #707070;
-        white-space: normal;
         font-size: 1.3rem;
     }
 

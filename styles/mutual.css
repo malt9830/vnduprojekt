@@ -51,7 +51,6 @@ header {
 .hidden {
     opacity: 0;
     z-index: -10;
-
 }
 
 #menuknap_wrapper {
@@ -76,6 +75,8 @@ header {
     width: 100%;
     z-index: 1;
 }
+
+/*slide animation til burgermenuen*/
 
 .slide {
     animation-name: slide_kf;
@@ -120,6 +121,7 @@ li a:hover {
     padding: 65px 0px;
 }
 
+/*textfarve til den nuværende tab i headerens navigation*/
 .current {
     color: #8d0019;
 }
@@ -174,8 +176,9 @@ li a:hover {
     }
 }
 
+/*------------brugermanu og nav global------------*/
+
 @media (min-width:650px) {
-    /*------------brugermanu og nav global------------*/
 
     #global {
         display: flex;
@@ -272,6 +275,8 @@ footer a {
     position: relative;
 }
 
+/*animation til kontaktlinksne i footeren*/
+
 footer a.kontaktlink::before {
     content: "";
     position: absolute;
@@ -298,9 +303,7 @@ footer a.kontaktlink:active {
     color: #8d0019;
 }
 
-footer a.kontaktlink:hover {
-    color: #8d0019;
-}
+/*organisering af footers indhold på tablet og desktop*/
 
 @media (min-width:650px) {
     .footer_top {
@@ -322,6 +325,8 @@ footer a.kontaktlink:hover {
 
 /*------------------knapper------------------*/
 
+/*effekter på knapperne med malingsbaggrunden*/
+
 #gallery_button:hover,
 #form_button:hover {
     animation: screenshot_scale 0.2s infinite;
@@ -329,6 +334,8 @@ footer a.kontaktlink:hover {
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
+
+/*hover-effekt til de almindelig mindre knapper*/
 
 .read_more:hover {
     background: #F3ACA9 !important;
@@ -349,6 +356,8 @@ footer a.kontaktlink:hover {
         transform: scale(1.03);
     }
 }
+
+/*design og stilering af de almindelig knapper samt deres hover-effekter*/
 
 .tilbage_knap {
     font-family: 'Assistant', sans-serif;

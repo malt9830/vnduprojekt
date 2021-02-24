@@ -5,6 +5,8 @@
     height: 100vh;
 }
 
+/*centrering af indholdet på landing*/
+
 #landing_content {
     position: absolute;
     width: 80%;
@@ -27,6 +29,8 @@
     font-size: 10rem;
 }
 
+/*farve til de enkelte bogstaver på forsidens logo*/
+
 #landing_v {
     color: #F3ACA9;
 }
@@ -43,6 +47,8 @@
     color: #E5B806;
 }
 
+/*pil til at indikere du kan scrolle fortsat ned fra landing*/
+
 .fa-chevron-down {
     position: absolute;
     bottom: 1rem;
@@ -50,19 +56,15 @@
     transform: translateX(-50%);
     font-size: 3rem;
     color: #DB0916;
+    text-decoration: none;
+    margin-top: 12px;
 }
-
 
 #landing h2 {
     font-family: 'Assistant', sans-serif;
     color: #E5B829;
     font-weight: 100;
     margin: 1rem 0 0 0;
-}
-
-.fa-chevron-down {
-    text-decoration: none;
-    margin-top: 12px;
 }
 
 @keyframes screenshot_scale {
@@ -74,6 +76,8 @@
         transform: scale(1.03);
     }
 }
+
+/*styring af landingens responsivitet*/
 
 @media (min-width:650px) {
     #landing h2 {
@@ -119,7 +123,7 @@
     }
 }
 
-/*        placering af logoets dele*/
+/*placering af logoets dele*/
 .logo_container {
     display: flex;
     justify-content: center;
@@ -177,6 +181,8 @@
 
 /*------------------welcome------------------*/
 
+/*placering af den interaktive mund under landing*/
+
 #section_welcome {
     height: 60vw;
     margin: 0 auto;
@@ -188,7 +194,7 @@
     }
 }
 
-/*mund*/
+/*placering af de individuelle elementer fra mundren samt deres animerede effekter*/
 #wrapper {
     width: 100%;
     position: absolute;
