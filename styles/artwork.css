@@ -1,0 +1,99 @@
+/*------------------artwork------------------*/
+
+#section_artwork {
+    width: 80%;
+    margin-bottom: 0;
+    margin-top: 8rem;
+}
+
+#section_other {
+    width: 80%;
+}
+
+#section_artwork div:nth-child(3) {
+    margin-top: 3rem;
+}
+
+#section_artwork .right {
+    background-color: white;
+    padding: 1.3rem;
+    margin-top: 0;
+}
+
+#section_artwork h2 {
+    font-family: 'Assistant', sans-serif;
+    color: #E5B829;
+    margin: 0;
+}
+
+#section_artwork h3 {
+    font-family: 'Assistant', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: #707070;
+    margin: 0.5rem 0;
+}
+
+#section_artwork h4 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+#section_artwork p {
+    font-family: 'Assistant', sans-serif;
+    margin-top: 3rem;
+    color: #707070;
+    white-space: normal;
+}
+
+
+@media (min-width:650px) {
+
+    #section_artwork {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    #section_artwork .right {
+        height: 100%;
+        padding: 2rem;
+    }
+
+    #section_artwork h2 {
+        font-family: 'Assistant', sans-serif;
+        color: #E5B829;
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    #section_artwork h3 {
+        font-family: 'Assistant', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        color: #707070;
+        margin: 0.5rem 0;
+        font-size: 1.7rem;
+    }
+
+    #section_artwork h4 {
+        font-family: 'Assistant', sans-serif;
+        font-weight: 600;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    #section_artwork p {
+        font-family: 'Assistant', sans-serif;
+        margin-top: 3rem;
+        color: #707070;
+        white-space: normal;
+        font-size: 1.3rem;
+    }
+
+    #section_artwork img {
+        height: 100%;
+        object-fit: cover;
+    }
+}

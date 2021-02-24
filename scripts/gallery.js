@@ -6,22 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
 //Her definerers filtervariabel og -funktion
 let filter = "Alle";
 const filterButtons = document.querySelectorAll("#section_gallery nav button");
-filterButtons.forEach(button => button.addEventListener("click", filterArt)); //her lægges en eventlisner på alle filteringsknapper, og sender ved klik en ned i funktionen filterArt.
+//Her lægges en eventlisner på alle filteringsknapper, og sender ved klik en ned i funktionen filterArt.
+filterButtons.forEach(button => button.addEventListener("click", filterArt));
 
 
 
 // Funktionen der filtrer indholdet på siden, alt efter hvad det klikkes på
 function filterArt() {
-    filter = this.dataset.materiale; // Her sættes filteret lig med matiralet på objektet
+    filter = this.dataset.materiale; // Her sættes filteret lig med materialet på knappens dataset-attribut
     console.log(filter);
 
-    document.querySelector(".selected").classList.remove("selected"); //fjerner css class med det lyserøde baggrundsfarve
+    document.querySelector(".selected").classList.remove("selected"); //fjerner css class med den lyserøde baggrundsfarve
 
     this.classList.add("selected"); // tilføjer class med den lyserøde baggrundsfarve
 
     showArt();
 }
-
 
 let art;
 
@@ -33,8 +33,6 @@ const options = {
         'x-apikey': "602e74535ad3610fb5bb6333"
     }
 };
-
-
 
 // Her hentes json ind fra restdb, og sendes vider til funktionen showArt
 async function loadJSON() {
@@ -60,7 +58,7 @@ function showArt() {
         if (filter == "Alle" || filter == artwork.materiale) {
             console.log("looping");
 
-            let clone = template.cloneNode(true).content; //Her klones template og udfyldes det med data fra de tilfældige objekter
+            let clone = template.cloneNode(true).content; //Her klones template og udfyldes  med data fra json
 
             clone.querySelector("img").src = media + artwork.billede[0];
             clone.querySelector("img").alt = artwork.kort;
@@ -72,7 +70,6 @@ function showArt() {
         }
     })
 }
-
 
 // Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
 function showDetails(artwork) {

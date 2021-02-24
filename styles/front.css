@@ -1,0 +1,558 @@
+/*------------------landing------------------*/
+
+#landing {
+    width: 100%;
+    height: 100vh;
+}
+
+#landing_content {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#landing_text {
+    text-align: center;
+}
+
+#landing_text_bottom {
+    line-height: 1rem;
+}
+
+.landing_letter {
+    display: inline-block;
+    font-family: 'Limelight', sans-serif;
+    font-size: 10rem;
+}
+
+#landing_v {
+    color: #F3ACA9;
+}
+
+#landing_n {
+    color: #E72118;
+}
+
+#landing_d {
+    color: #8BAAEC;
+}
+
+#landing_u {
+    color: #E5B806;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #DB0916;
+}
+
+
+#landing h2 {
+    font-family: 'Assistant', sans-serif;
+    color: #E5B829;
+    font-weight: 100;
+    margin: 1rem 0 0 0;
+}
+
+.fa-chevron-down {
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+@keyframes screenshot_scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+@media (min-width:650px) {
+    #landing h2 {
+        margin: -2rem 0 0 0;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 950px) {
+    #landing_text_bottom {
+        line-height: 2rem;
+    }
+
+    #landing h2 {
+        margin: 0 0 0 0;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #landing h2 {
+        margin: -2rem 0 0 0;
+    }
+}
+
+@media (min-width:650px) {
+
+    #landing_text_top,
+    #landing_text_bottom {
+        display: inline-block;
+        line-height: normal;
+    }
+
+    #landing_text {
+        place-self: center center;
+    }
+}
+
+@media (min-width:950px) {
+    #landing_grid {
+        display: grid;
+        grid-template-columns: 10fr 25fr;
+    }
+}
+
+/*        placering af logoets dele*/
+.logo_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+/*animationer for hver væg i logoet ved load*/
+
+.left_wall {
+    animation: flyin_left 1.5s ease forwards;
+    opacity: 0;
+    transform: scale(2);
+    filter: blur(4px);
+}
+
+@keyframes flyin_left {
+    to {
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.middle_wall {
+    animation: flyin_middle 3s ease forwards;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+@keyframes flyin_middle {
+    to {
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.right_wall {
+    animation: flyin_right 2.5s ease forwards;
+    opacity: 0;
+    transform: scale(3.5);
+    filter: blur(0px);
+}
+
+@keyframes flyin_right {
+    to {
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*------------------welcome------------------*/
+
+#section_welcome {
+    height: 60vw;
+    margin: 0 auto;
+}
+
+@media (min-width:950px) {
+    #section_welcome {
+        height: 43vw;
+    }
+}
+
+/*mund*/
+#wrapper {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+}
+
+@media (min-width:650px) {
+    #wrapper {
+        transform: translateX(-50%) scale(0.8);
+    }
+}
+
+#lips_container {
+    position: absolute;
+    left: 30vw;
+    top: 15vw;
+}
+
+#lips_sprite {
+    background-image: url(../img/talkinglips/Lips.svg);
+    background-size: cover;
+    width: 35vw;
+    height: 15vw;
+}
+
+#tale1_container {
+    position: absolute;
+    left: 44vw;
+    top: 25vw;
+}
+
+#tale1_sprite {
+    background-image: url(../img/talkinglips/enjoypink.svg);
+    background-size: cover;
+    width: 11vw;
+    height: 24vw;
+}
+
+.scale {
+    animation: tale_scale 3s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes tale_scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scaleY(1.2);
+    }
+}
+
+#tale2_container {
+    position: absolute;
+    left: 58vw;
+    top: 22vw;
+}
+
+#tale2_sprite {
+    background-image: url(../img/talkinglips/hallojsablue.svg);
+    background-size: cover;
+    width: 24vw;
+    height: 15vw;
+}
+
+.scale2 {
+    animation: tale_scale2 4s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top left;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes tale_scale2 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+#tale3_container {
+    position: absolute;
+    left: 35vw;
+    top: 2vw;
+}
+
+#tale3_sprite {
+    background-image: url(../img/talkinglips/hallopink.svg);
+    background-size: cover;
+    width: 10vw;
+    height: 18vw;
+}
+
+.scale3 {
+    animation: tale_scale3 2.5s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: bottom right;
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+}
+
+
+@keyframes tale_scale3 {
+    0% {
+        transform: skewY(1deg);
+    }
+
+    100% {
+        transform: skewX(20deg);
+    }
+}
+
+#tale4_container {
+    position: absolute;
+    left: 53vw;
+    top: 25vw;
+}
+
+#tale4_sprite {
+    background-image: url(../img/talkinglips/Hejdu.svg);
+    background-size: cover;
+    width: 29vw;
+    height: 23vw;
+}
+
+.scale4 {
+    animation: tale_scale4 2s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+}
+
+
+@keyframes tale_scale4 {
+    0% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: skewX(20deg);
+    }
+}
+
+#tale5_container {
+    position: absolute;
+    left: 49vw;
+    top: 2vw;
+}
+
+#tale5_sprite {
+    background-image: url(../img/talkinglips/hejj.svg);
+    background-size: cover;
+    width: 12vw;
+    height: 18vw;
+}
+
+.scale5 {
+    animation: tale_scale5 4s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: bottom left;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes tale_scale5 {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: skewX(-30deg);
+    }
+}
+
+
+#tale6_container {
+    position: absolute;
+    left: 24vw;
+    top: 22vw;
+}
+
+#tale6_sprite {
+    background-image: url(../img/talkinglips/heythere.svg);
+    background-size: cover;
+    width: 25vw;
+    height: 16vw;
+}
+
+.scale6 {
+    animation: tale_scale6 2s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top left;
+    animation-direction: alternate-reverse;
+    animation-delay: 3s;
+}
+
+
+@keyframes tale_scale6 {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: skewX(-15deg);
+    }
+}
+
+
+#tale7_container {
+    position: absolute;
+    left: 18vw;
+    top: 20vw;
+
+}
+
+#tale7_sprite {
+    background-image: url(../img/talkinglips/lookyellow.svg);
+    background-size: cover;
+    width: 28vw;
+    height: 10vw;
+}
+
+
+.scale7 {
+    animation: tale_scale7 2s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top left;
+    animation-direction: alternate-reverse;
+    animation-delay: 4s;
+}
+
+
+@keyframes tale_scale7 {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: skewX(-40deg);
+    }
+}
+
+#tale8_container {
+    position: absolute;
+    left: 22vw;
+    top: 11vw;
+
+}
+
+#tale8_sprite {
+    background-image: url(../img/talkinglips/velkommenblue.svg);
+    background-size: cover;
+    width: 21vw;
+    height: 11vw;
+}
+
+.scale8 {
+    animation: tale_scale8 2s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: bottom;
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+}
+
+
+@keyframes tale_scale8 {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: skewX(40deg);
+    }
+}
+
+#tale9_container {
+    position: absolute;
+    left: 52vw;
+    top: 7vw;
+
+}
+
+#tale9_sprite {
+    background-image: url(../img/talkinglips/welcomegul.svg);
+    background-size: cover;
+    width: 28vw;
+    height: 19vw;
+}
+
+.scale9 {
+    animation: tale_scale9 2s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: bottom;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes tale_scale9 {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: skew(-30deg);
+    }
+}
+
+/*responsiveness for logoets dele*/
+
+@media (min-width:650px) {
+
+    .logo_container {
+        display: flex;
+        justify-content: flex-end;
+        justify-items: center;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        max-width: 550px;
+        max-height: 400px;
+    }
+
+    .left_wall img,
+    .middle_wall img,
+    .right_wall img {
+        max-height: 400px;
+    }
+}
+
+@media (min-width:725px) {
+
+    .logo_container {
+        margin-left: 10vw;
+    }
+}
+
+@media (min-width:950px) {
+    .logo_container {
+        margin: 0 2vw 0 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .landing_letter {
+        font-size: 13vw;
+    }
+
+    #landing_text_top,
+    #landing_text_bottom {
+        display: inline-block;
+        line-height: normal;
+    }
+
+    #landing_text {
+        place-self: center center;
+    }
+}

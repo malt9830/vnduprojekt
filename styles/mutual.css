@@ -1,0 +1,378 @@
+/*------------------essentials------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 1rem;
+}
+
+body {
+    background-color: #F0E6DD;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Limelight', sans-serif;
+}
+
+@media (min-width:650px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/*------------------utility------------------*/
+
+.none {
+    display: none;
+}
+
+/*------------------header------------------*/
+
+/*menu fane og dens design på mobiludgaven global*/
+
+header {
+    background-color: #D9D0C8;
+    height: 80px;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -10;
+
+}
+
+#menuknap_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 2vh;
+}
+
+
+#menuknap {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#oversigt {
+    list-style-type: none;
+    display: block;
+    padding: 20px 0px;
+    margin: 0px;
+    position: absolute;
+    background-color: #D9D0C8;
+    width: 100%;
+    z-index: 1;
+}
+
+.slide {
+    animation-name: slide_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes slide_kf {
+    0% {
+        transform: translateX(-60vw);
+    }
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+
+li a {
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #D9D0C8;
+    color: white;
+    font-family: 'Limelight', sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    margin: 20px;
+}
+
+li a:hover {
+    color: #8d0019;
+}
+
+
+/*    menuen */
+#oversigt {
+    padding: 65px 0px;
+}
+
+.current {
+    color: #8d0019;
+}
+
+
+/* ------- burgermenu icon hvordan den går over i x -----------*/
+.bar1,
+.bar2,
+.bar3 {
+    width: 34px;
+    height: 5px;
+    background-color: #f5faff;
+    margin: 6px 20px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+#logo_menu {
+    display: inline-block;
+    position: absolute;
+    width: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4%;
+    z-index: 20;
+}
+
+@media (min-width:650px) {
+    #oversigt {
+        padding: 20px 0px;
+    }
+
+    #logo_menu {
+        width: 7rem;
+        left: 3%;
+        top: 30%;
+        transform: translateX(0%);
+    }
+}
+
+@media (min-width:650px) {
+    /*------------brugermanu og nav global------------*/
+
+    #global {
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0px 0px;
+        width: 100vw;
+        z-index: 1
+    }
+
+    #menuknap_wrapper {
+        padding: 0vh 0vh;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+    #oversigt.hidden {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    #oversigt li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0px;
+        margin: 0% 3%;
+    }
+
+    li a {
+        margin: 10px 20px;
+    }
+
+    #oversigt {
+        position: relative;
+        text-align: center;
+    }
+
+    #logo_menu {
+        width: 8%;
+        left: 3%;
+        top: 30%;
+    }
+}
+
+/*------------------footer------------------*/
+
+footer {
+    background-color: #E5B829;
+    color: white;
+    padding: 1.5rem;
+    margin-top: 4rem;
+}
+
+footer h4 {
+    font-family: 'Assistant';
+    font-weight: 700;
+    margin-top: 0;
+}
+
+footer p {
+    font-family: 'Assistant';
+    margin: 0;
+}
+
+footer i {
+    cursor: pointer;
+}
+
+footer .left {
+    margin-bottom: 2.5rem;
+}
+
+footer .right {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.footer_bottom {
+    text-align: center;
+}
+
+footer .fab {
+    margin: 1rem;
+    align-self: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+footer a.kontaktlink::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #8d0019;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+footer a.kontaktlink:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+footer a.kontaktlink:hover {
+    color: #8d0019;
+}
+
+footer a.kontaktlink:active {
+    color: #8d0019;
+}
+
+footer a.kontaktlink:hover {
+    color: #8d0019;
+}
+
+@media (min-width:650px) {
+    .footer_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+
+    footer .left,
+    footer .right {
+        margin-bottom: 0;
+    }
+
+    footer .right {
+        display: flex;
+    }
+}
+
+/*------------------knapper------------------*/
+
+#gallery_button:hover,
+#form_button:hover {
+    animation: screenshot_scale 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.read_more:hover {
+    background: #F3ACA9 !important;
+    border-color: #F3ACA9 !important;
+    animation: screenshot_scale 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes screenshot_scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+.tilbage_knap {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #FCBF2F;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid #FCBF2F;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tilbage_knap:hover {
+    background: #F3ACA9 !important;
+    border-color: #F3ACA9 !important;
+    animation: screenshot_scale 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.tilbage_container {
+    margin-top: 3rem;
+}
