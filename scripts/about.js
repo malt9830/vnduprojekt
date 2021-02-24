@@ -3,12 +3,12 @@ const artistButtons = document.querySelectorAll(".button_artist");
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOMContentLoaded");
 
-    //Tilføjer knap-funktionen til de 4 kunsterknapper
+    //Tilføjer knap-funktionen til de 4 kunstnerknapper
     artistButtons.forEach(button => button.addEventListener("click", loadArtistPage)) //Her lægges en eventlisner på alle knapperne, og sender ved klik en ned i funktionen loadArtistPage.
 });
 
 
-//I funktionen loadArtistPage, sættes hvert kunstneres side op med alle ens samledeværker
+//I funktionen loadArtistPage, sættes hver kunstners side op med alle ens samlede værker
 function loadArtistPage() {
     console.log("loadArtistPage");
 
