@@ -20,6 +20,7 @@
     <header>
         <nav id="global">
             <div id="menuknap_wrapper">
+                <!--Burgermenuen som vises på mibiludgaven-->
                 <div id="menuknap">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
@@ -27,6 +28,7 @@
                 </div>
                 <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
             </div>
+            <!--Menuens tre punkter-->
             <ul id="oversigt" class="hidden" class="slide">
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Kunstnere</a></li>
@@ -36,7 +38,7 @@
     </header>
     <section id="section_gallery">
         <h1></h1>
-        <!--Container til udfyldelse af jsondata filtreret efter kunstner-->
+        <!--Tom container til udfyldelse af jsondata filtreret efter kunstner-->
         <div class="container"></div>
         <div class="tilbage_container">
             <a href="javascript:history.back()" class="tilbage_knap">Tilbage</a>
@@ -46,7 +48,7 @@
             <p>Se hele galleriet her</p>
         </a>
     </section>
-    <!--Templaten hvilken klones, udfyldes og indsættes i containeren-->
+    <!--Templaten (skabelon) hvilken klones, udfyldes og indsættes i containeren ovenfor-->
     <template>
         <article>
             <div class="top">
@@ -64,6 +66,9 @@
             </div>
         </article>
     </template>
+
+
+
     <footer>
         <div class="footer_top">
             <div class="left">

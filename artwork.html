@@ -21,6 +21,7 @@
     <header>
         <nav id="global">
             <div id="menuknap_wrapper">
+                <!--Burgermenuen som vises på mibiludgaven-->
                 <div id="menuknap">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
@@ -28,6 +29,7 @@
                 </div>
                 <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
             </div>
+            <!--Menuens tre punkter-->
             <ul id="oversigt" class="hidden" class="slide">
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Kunstnere</a></li>
@@ -53,12 +55,17 @@
                 <a href="javascript:history.back()" class="tilbage_knap">Tilbage</a>
             </div>
         </section>
+
+
         <section id="section_other">
             <h1>Måske kan du også lide</h1>
-            <!--Container for de tilfældigt genererede billeder ud fra det hentede json-->
+
+            <!--En tom container til de tilfældigt genererede billeder ud fra det hentede json-->
             <div class="container"></div>
         </section>
-        <!--Templaten der klones og udfyldes af det tilfældige objekter fra json-->
+
+
+        <!--Templaten (skabelon) der klones og udfyldes af det tilfældige objekter fra json og tilføjes til ovenstående container-->
         <template>
             <article>
                 <div class="top">
@@ -77,6 +84,8 @@
             </article>
         </template>
     </main>
+
+
     <footer>
         <div class="footer_top">
             <div class="left">
