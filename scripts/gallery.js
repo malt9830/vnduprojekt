@@ -39,8 +39,7 @@ function filterArt() {
     //Fjerner dropdown på mobilversion
     dropdownItems.style.display = "none";
 
-    //Sætter dropdown til sig selv
-
+    //Sætter dropdown-tagget lig nuværende filter
     dropdownButton.firstElementChild.textContent = filter;
 
     showArt();

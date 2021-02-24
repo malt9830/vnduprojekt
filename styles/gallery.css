@@ -194,6 +194,8 @@ article .bottom {
     display: inline-block;
 }
 
+/*sætter dropdowntagget og -pilen ved siden af hinanden i hver sin ende af elementet*/
+
 #dropdown_flex {
     display: flex;
     flex-direction: row;
@@ -201,6 +203,8 @@ article .bottom {
     background: #FCBF2F;
     text-decoration: none;
 }
+
+/*skjuler dropdown-indholdet*/
 
 #dropdown_items {
     display: none;
@@ -214,6 +218,9 @@ article .bottom {
 }
 
 @media (min-width:650px) {
+
+    /*tilføjer hovereffekter til knapperne på tablet og desktop*/
+
     #section_gallery nav button {
         display: inline-block;
         margin: 1rem;
@@ -226,7 +233,7 @@ article .bottom {
         border-color: #F3ACA9 !important;
     }
 
-
+    /*skjuler dropdownmenuen og placerer nav normalt*/
 
     #dropdown_flex {
         display: none;
