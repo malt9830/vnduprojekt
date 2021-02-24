@@ -20,6 +20,7 @@
     <header>
         <nav id="global">
             <div id="menuknap_wrapper">
+                <!--Burgermenuen som vises på mibiludgaven-->
                 <div id="menuknap">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
@@ -27,6 +28,7 @@
                 </div>
                 <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
             </div>
+            <!--Menuens tre punkter-->
             <ul id="oversigt" class="hidden" class="slide">
                 <li><a href="gallery.html" class="current">Galleri</a></li>
                 <li><a href="about.html">Kunstnere</a></li>
@@ -47,10 +49,13 @@
                 <button data-materiale="Tuscher">Tuscher</button>
                 <button data-materiale="Digital">Digital</button>
             </nav>
-            <!--Container af det dynamiske data nedhentet fra restdb som json-->
+
+            <!--En tom container til det dynamiske data nedhentet fra restdb som json-->
             <div class="container"></div>
         </section>
-        <!--Templaten som klones,  udfyldes af restdb-objekternes data og indsættes i ovenstående container-->
+
+
+        <!--Templaten (skabelon) som klones,  udfyldes af restdb-objekternes data og indsættes i ovenstående container-->
         <template>
             <article>
                 <div class="top">
@@ -69,6 +74,8 @@
             </article>
         </template>
     </main>
+
+
     <footer>
         <div class="footer_top">
             <div class="left">

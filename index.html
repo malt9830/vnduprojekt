@@ -21,6 +21,8 @@
     <header>
         <nav id="global">
             <div id="menuknap_wrapper">
+
+                <!--Burgermenuen som vises på mibiludgaven-->
                 <div id="menuknap">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
@@ -28,6 +30,7 @@
                 </div>
                 <a href="index.html" id="logo_menu"><img src="img/logo.svg" alt="logo"></a>
             </div>
+            <!--Menuens tre punkter-->
             <ul id="oversigt" class="hidden" class="slide">
                 <li><a href="gallery.html">Galleri</a></li>
                 <li><a href="about.html">Kunstnere</a></li>
@@ -99,12 +102,16 @@
         </section>
         <!--Eksempler fra galleri + navigation til single view og galleri-->
         <section id="section_examples">
+
+            <!--En tom container til de tilfældigt genererede billeder ud fra det hentede json-->
             <div class="container"></div>
             <a href="gallery.html" id="gallery_button">
                 <img src="img/buttons/button_yellow.svg" alt="gallery button">
                 <p>Besøg galleriet</p>
             </a>
         </section>
+
+        <!--Templaten (skabelon) der klones og udfyldes af det tilfældige objekter fra json og tilføjes til ovenstående container-->
         <template>
             <article>
                 <div class="top">
@@ -123,6 +130,7 @@
             </article>
         </template>
     </main>
+
     <!--    footer-->
     <footer>
         <div class="footer_top">
