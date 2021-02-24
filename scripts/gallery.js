@@ -3,12 +3,28 @@ document.addEventListener("DOMContentLoaded", () => {
     loadJSON();
 })
 
+
+//Definerer konstanter til brug i dropdown
+const dropdownButton = document.querySelector("#dropdown_flex");
+const dropdownItems = document.querySelector("#dropdown_items");
+
+dropdownButton.addEventListener("click", dropdownMenu);
+
+function dropdownMenu() {
+    console.log("dropdownMenu");
+
+    if (dropdownItems.style.display == "block") {
+        dropdownItems.style.display = "none"
+    } else {
+        dropdownItems.style.display = "block";
+    }
+}
+
 //Her definerers filtervariabel og -funktion
 let filter = "Alle";
-const filterButtons = document.querySelectorAll("#section_gallery nav button");
+const filterButtons = document.querySelectorAll("#dropdown_items button");
 //Her lægges en eventlisner på alle filteringsknapper, og sender ved klik en ned i funktionen filterArt.
 filterButtons.forEach(button => button.addEventListener("click", filterArt));
-
 
 
 // Funktionen der filtrer indholdet på siden, alt efter hvad det klikkes på
@@ -19,6 +35,13 @@ function filterArt() {
     document.querySelector(".selected").classList.remove("selected"); //fjerner css class med den lyserøde baggrundsfarve
 
     this.classList.add("selected"); // tilføjer class med den lyserøde baggrundsfarve
+
+    //Fjerner dropdown på mobilversion
+    dropdownItems.style.display = "none";
+
+    //Sætter dropdown til sig selv
+
+    dropdownButton.firstElementChild.textContent = filter;
 
     showArt();
 }

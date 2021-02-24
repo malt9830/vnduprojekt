@@ -163,6 +163,7 @@ article .bottom {
 /*stilerer filtreringsknapperne ovenover galleriet og giver dem hovereffekt*/
 
 #section_gallery nav {
+    margin: 0.5rem;
     text-align: center;
 }
 
@@ -173,15 +174,35 @@ article .bottom {
     background: #FCBF2F;
     color: white;
     padding: 1rem;
-    text-align: center;
     border: 2px solid #FCBF2F;
     cursor: pointer;
-    margin: 1rem;
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin: 0.1rem 0;
 }
 
-#section_gallery nav button:hover {
-    background: #F3ACA9 !important;
-    border-color: #F3ACA9 !important;
+.dropdown {
+    font-family: 'Assistant', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    background: #FCBF2F;
+    color: white;
+    padding: 1rem;
+    border: 2px solid #FCBF2F;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#dropdown_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #FCBF2F;
+}
+
+#dropdown_items {
+    display: none;
 }
 
 /*klasse til brug af den nuværende anvendte filtreringsknap*/
@@ -190,6 +211,32 @@ article .bottom {
     background: #F3ACA9 !important;
     border-color: #F3ACA9 !important;
 }
+
+@media (min-width:650px) {
+    #section_gallery nav button {
+        display: inline-block;
+        margin: 1rem;
+        width: auto;
+        text-align: center
+    }
+
+    #section_gallery nav button:hover {
+        background: #F3ACA9 !important;
+        border-color: #F3ACA9 !important;
+    }
+
+
+
+    #dropdown_flex {
+        display: none;
+    }
+
+    #dropdown_items {
+        display: block !important;
+    }
+}
+
+
 
 @media (min-width:650px) {
 
