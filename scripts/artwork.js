@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Her hentes json ind fra restdb, og sendes vider til funktionen showArt
+// Her hentes json ind fra restdb, og starter så funktionen showArtwork
 async function loadJSON() {
     //Henter json og gemmer det som artwork
     const JSONData = await fetch(`https://vnduprojekt-ec80.restdb.io/rest/vndu/${id}`, options);
@@ -87,7 +87,7 @@ function showOther() {
         clone.querySelector("h3").textContent = `Af ${rngArt.kunstner}`;
         clone.querySelector("p").textContent = rngArt.kort;
         clone.querySelector("article").addEventListener("click", () => showDetails(rngArt));
-        container.appendChild(clone); //kolene tilføres til DOM
+        container.appendChild(clone); //klonerne tilføres til DOM
     })
 
 }

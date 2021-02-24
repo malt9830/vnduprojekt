@@ -20,7 +20,7 @@ const options = {
 };
 
 
-// Her hentes json ind fra restdb, og sendes vider til funktionen showArt
+// Her hentes json ind fra restdb, og starter så funktionen showArt
 async function loadJSON() {
     //Henter json og gemmer det som art
     const JSONData = await fetch(url, options);
@@ -47,7 +47,7 @@ function showArt() {
         //Definerer filter ud fra objektets kunstner
         const filter = artwork.kunstner.split(" ").join("_");
 
-        //Tjekker om filter og id er lig hinanden således der kun vises kunst fra kunstnerens hvis knap blev trykket på om-siden
+        //Tjekker om filter og id er lig hinanden således der kun vises kunst fra kunstneren hvis knap blev trykket på om-siden
         if (filter == id) {
             console.log("looping");
             //Kloner template og udfylder det med data fra de tilfældige objekter

@@ -15,7 +15,7 @@ const options = {
 };
 
 
-// Her hentes json ind fra restdb, og sendes vider til funktionen showArt
+// Her hentes json ind fra restdb, og starter så funktionen showArt
 async function loadJSON() {
     //Henter json og gemmer det som art
     const JSONData = await fetch(url, options);
