@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//Definerer konstanter til senere brug for fetch af json
+//Her defineres konstanter til senere brug for fetch af json
 const url = "https://vnduprojekt-ec80.restdb.io/rest/vndu";
 const media = "https://vnduprojekt-ec80.restdb.io/media/";
 const options = {
@@ -19,6 +19,8 @@ const options = {
     }
 };
 
+
+// Her hentes json ind fra restdb, og sendes vider til funktionen showArt
 async function loadJSON() {
     //Henter json og gemmer det som art
     const JSONData = await fetch(url, options);
@@ -26,13 +28,18 @@ async function loadJSON() {
     showArt();
 }
 
+
+// I funktionen showArt, sættes hvert enkelt kunstværk ind i HTML
 function showArt() {
     console.log("showingArt");
     console.log(art);
-    //Definerer konstanter til senere brug i kloningen af template
+
+    //Her definerers konstanter til senere brug i kloningen af template
     const template = document.querySelector("template");
     const container = document.querySelector(".container")
-    container.textContent = "";
+
+    container.textContent = ""; // HTML containeren tømmes for eksisterende indhold, og kan nu få tilført nyt indhold.
+
     document.querySelector("h1").textContent = `${id.split("_").join(" ")}s kunst`
     document.title = id.split("_").join(" ");
 
@@ -51,11 +58,13 @@ function showArt() {
             clone.querySelector("h3").textContent = `Af ${artwork.kunstner}`;
             clone.querySelector("p").textContent = artwork.kort;
             clone.querySelector("article").addEventListener("click", () => showDetails(artwork));
-            container.appendChild(clone);
+            container.appendChild(clone); //kolene tilføres til DOM
         }
     })
 }
 
+
+// Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
 function showDetails(artwork) {
     console.log("showDetails");
     location.href = `artwork.html?id=${artwork._id}`;

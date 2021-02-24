@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loadOtherJSON();
 });
 
+
+
+// Her hentes json ind fra restdb, og sendes vider til funktionen showArt
 async function loadJSON() {
     //Henter json og gemmer det som artwork
     const JSONData = await fetch(`https://vnduprojekt-ec80.restdb.io/rest/vndu/${id}`, options);
@@ -29,6 +32,10 @@ async function loadJSON() {
     showArtwork(artwork);
 }
 
+
+
+
+// I funktionen showArt, sættes indhodet ind for det specefikke kunstværk ind i HTML
 function showArtwork(artwork) {
     console.log("showingArtwork");
 
@@ -43,6 +50,8 @@ function showArtwork(artwork) {
     document.title = `${artwork.navn}`;
 }
 
+
+
 async function loadOtherJSON() {
     const otherJSON = await fetch(url, options);
     otherArt = await otherJSON.json();
@@ -51,6 +60,8 @@ async function loadOtherJSON() {
     showOther();
 }
 
+
+//Her i funktioen genereres tre til fire tilfeldeig andre kunstværker og sættes ind i HTML
 function showOther() {
     console.log("showingOther");
 
@@ -67,19 +78,21 @@ function showOther() {
         const template = document.querySelector("template");
         const container = document.querySelector(".container");
 
-        //Kloner template og udfylder det med data fra de tilfældige objekter
-        let clone = template.cloneNode(true).content;
+
+        let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+
         clone.querySelector("img").src = media + rngArt.billede[0];
         clone.querySelector("img").alt = rngArt.kort;
         clone.querySelector("h2").textContent = rngArt.navn;
         clone.querySelector("h3").textContent = `Af ${rngArt.kunstner}`;
         clone.querySelector("p").textContent = rngArt.kort;
         clone.querySelector("article").addEventListener("click", () => showDetails(rngArt));
-        container.appendChild(clone);
+        container.appendChild(clone); //kolene tilføres til DOM
     })
 
 }
 
+// Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
 function showDetails(rngArt) {
     console.log("showingDetails");
     location.href = `artwork.html?id=${rngArt._id}`;
