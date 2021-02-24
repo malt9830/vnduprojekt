@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("DOMContentLoaded");
 
     //Tilføjer knap-funktionen til de 4 kunsterknapper
-    artistButtons.forEach(button => button.addEventListener("click", loadArtistPage))
+    artistButtons.forEach(button => button.addEventListener("click", loadArtistPage)) //Her lægges en eventlisner på alle knapperne, og sender ved klik en ned i funktionen loadArtistPage.
 });
 
+
+//I funktionen loadArtistPage, sættes hvert kunstneres side op med alle ens samledeværker
 function loadArtistPage() {
     console.log("loadArtistPage");
 
@@ -14,6 +16,8 @@ function loadArtistPage() {
     const artistName = this.parentElement.firstElementChild.firstElementChild.textContent.split(" ").join("_");
     console.log(artistName);
 
+
+    // Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
     //Anvender ovenstående konstant som id til kunstnersidens url
     location.href = `artist.html?id=${artistName}`;
 }
