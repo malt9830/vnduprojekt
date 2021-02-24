@@ -160,11 +160,11 @@ article .bottom {
     height: auto;
 }
 
+/*stilerer filtreringsknapperne ovenover galleriet og giver dem hovereffekt*/
+
 #section_gallery nav {
     text-align: center;
 }
-
-/*stilerer filtreringsknapperne ovenover galleriet og giver dem hovereffekt*/
 
 #section_gallery nav button {
     font-family: 'Assistant', sans-serif;
