@@ -5,6 +5,16 @@
     height: 100vh;
 }
 
+#logo_menu {
+    top: -11%;
+}
+
+/*
+.forside_logo {
+    margin: -2rem 0 2rem 0;
+}
+*/
+
 /*centrering af indholdet på landing*/
 
 #landing_content {
